@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head><base href="http://yii2.madwave.ru/">
+    <meta charset="UTF-8">
+    <title>CORE ALIGNMENT | Калабашка | Mad Wave</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="R3RxSjBpSjcePzNzCSUvdH4dHgNZP3hYBkxADQQlBWETMCEsc1EtYQ==">
+    <meta name="description">
+    <link href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki/kalabashka/core-alignment" rel="canonical">
+    <link href="/css/style.min.css" rel="stylesheet">
+    <!-- New styles are below-->
+    <link href="http://localhost:3000/css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?language=ru-RU&amp;key=AIzaSyCBzSmFXDwXLHoq-RaGsHlELpPqVXHQ3vM&amp;libraries=places&amp;callback=gmapInitializeer"></script>
+    <script>
+      function gmapInitializeer() {
+      if (typeof initMap == 'function') initMap();
+      }
+    </script>
+  </head>
+  <body class="world index">
+    <!-- TEMP--><script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+    <div id="wrap">
+      <div id="sub-header">
+        <div class="container">
+          <div class="pull-left pointer call-city-picker" data-target="#city-picker"><i class="map-marker"></i><span class="city location-city">Москва</span>
+            <div class="caret custom"></div>
+          </div>
+          <div class="modal fade" id="city-picker" tabindex="0" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <h2>Выбор города<br><small>Всего<span>1204</span> города</small></h2>
+                </div>
+                <div class="modal-body">
+                  <label for="city-picker-input">выберите или введите название вашего города</label>
+                  <input class="form-control location-city" id="city-picker-input" type="text" value="Москва">
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul>
+                        <li><span class="set-city active" data-city="Москва">Москва</span></li>
+                        <li><span class="set-city" data-city="Санкт-Петербург">Санкт-Петербург</span></li>
+                        <li><span class="set-city" data-city="Архангельск">Архангельск</span></li>
+                        <li><span class="set-city" data-city="Владивосток">Владивосток</span></li>
+                        <li><span class="set-city" data-city="Волгоград">Волгоград</span></li>
+                        <li><span class="set-city" data-city="Воронеж">Воронеж</span></li>
+                        <li><span class="set-city" data-city="Екатеренбург">Екатеренбург</span></li>
+                        <li><span class="set-city" data-city="Ижевск">Ижевск</span></li>
+                        <li><span class="set-city" data-city="Иркутск">Иркутск</span></li>
+                        <li><span class="set-city" data-city="Казань">Казань</span></li>
+                        <li><span class="set-city" data-city="Кеиерово">Кеиерово</span></li>
+                        <li><span class="set-city" data-city="Краснодар">Краснодар</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <ul>
+                        <li><span class="set-city" data-city="Красноярск">Красноярск</span></li>
+                        <li><span class="set-city" data-city="Мурманск">Мурманск</span></li>
+                        <li><span class="set-city" data-city="Набережные челны">Набережные челны</span></li>
+                        <li><span class="set-city" data-city="Нижний Новгород">Нижний Новгород</span></li>
+                        <li><span class="set-city" data-city="Новосибирск">Новосибирск</span></li>
+                        <li><span class="set-city" data-city="Омск">Омск</span></li>
+                        <li><span class="set-city" data-city="Перьм">Перьм</span></li>
+                        <li><span class="set-city" data-city="Ростов-на-Дону">Ростов-на-Дону</span></li>
+                        <li><span class="set-city" data-city="Саратов">Саратов</span></li>
+                        <li><span class="set-city" data-city="Самара">Самара</span></li>
+                        <li><span class="set-city" data-city="Сургут">Сургут</span></li>
+                        <li><span class="set-city" data-city="Тверь">Тверь</span></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <ul>
+                        <li><span class="set-city" data-city="Тольятти">Тольятти</span></li>
+                        <li><span class="set-city" data-city="Тула">Тула</span></li>
+                        <li><span class="set-city" data-city="Тюмень">Тюмень</span></li>
+                        <li><span class="set-city" data-city="Ульяновск">Ульяновск</span></li>
+                        <li><span class="set-city" data-city="Уфа">Уфа</span></li>
+                        <li><span class="set-city" data-city="Хабаровск">Хабаровск</span></li>
+                        <li><span class="set-city" data-city="Челябинск">Челябинск</span></li>
+                        <li><span class="set-city" data-city="Ярославль">Ярославль</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-side"><a href="#">ГАРАНТИРОВАННЫЕ ПОДАРКИ НА СУММУ ОТ 5000 РУБЛЕЙ!</a><span class="pipe">|</span>                ПОДРОБНЕЕ 8 800 100 57 19<span class="pipe">|</span><span class="sosocial"><span>ПОДПИСЫВАЙСЯ</span><a class="fa fa-facebook" href="https://www.facebook.com/madwavemax"></a><a class="fa fa-twitter" href="https://twitter.com/madwave"></a><a class="fa fa-youtube" href="https://www.youtube.com/c/madwaverus"></a><a class="fa fa-vk" href="https://vk.com/madwaverus"></a><a class="fa fa-google-plus" href="https://plus.google.com/+MadWaveRus"></a></span></div>
+        </div>
+      </div>
+      <header id="header">
+        <div class="container"><a class="logo" href="/"></a>
+          <nav id="nav">
+            <div class="humburger"><span class="hidden-xs hidden-sm">Каталог<i class="fa fa-chevron-right"></i></span><i class="fa fa-bars"></i>
+              <ul id="catalog">
+                <li class="closer">
+                  <div class="close-catalog"></div>
+                  <div class="close-nav"></div>
+                </li>
+                <li><a class="item hidden-xs hidden-sm color-red" href="http://yii2.madwave.ru/stock"><i class="fa fa-tag"></i>Спецпредложения</a></li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/gidrokostjumy-dlya-plavaniya">Стартовые костюмы</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/gidrokostyumy-fina/zhenskiy-startovyy-kostyum">Женские гидрокостюмы</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/gidrokostyumy-fina/muzhskoy-startovyy-kostyum">Мужские гидрокостюмы</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/aksessuary/ochki-dlya-plavaniya">Очки для плавания</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/startovye-ochki">Стартовые очки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya">Тренировочные очки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-yuniorskie">Юниорские очки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-detskie">Детские очки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-s-dioptriyami">Очки с диоптриями</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/maski-dlya-plavaniya">Маски для плавания</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/aksessuary-dlya-ochkov">Аксессуары для очков</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/ochki/aksessuary-dlya-ochkov/sprey-protiv-zapotevaniya">Антифог</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya">Шапочки для плавания</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/rezinovaya-shapochka">Резиновые шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/silikonovaya-shapochka">Силиконовые шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/lateksnaya-shapochka">Латексные шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/tekstilnaya-shapochka">Текстильные шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/shapochki-dlya-plavaniya-2">Комбинированные шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/yuniorskaya-pu-shapochka">Детские шапочки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/shapochka-dlya-dusha">Шапочки для душа</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya">Инвентарь для плавания</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/trenazhery-dlya-plavaniya">Тренажеры</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/lasty">Ласты для плавания</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/lopatki">Лопатки для плавания</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki">Доски и калабашки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/berushi-nosovye-zazhimy-antifogi">Беруши, носовые зажимы</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/polotenca">Полотенца</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/sumki">Рюкзаки и сумки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/elektronnye-ustroystva">Электронные устройства</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/noski">Носки для бассейна</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie">Женские купальники</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/zhenskiy-kupalnik-sportivnyy-19">Спортивные купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/zhenskiy-kupalnik-sportivnyy-20">Купальники антихлор</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskiy-kupalnik-modeliruyushchiy">Моделирующие купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/detskie-sportivnye-kupalniki-i-plavki/detskiy-kupalnik-12">Юниорские купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/detskie-sportivnye-kupalniki-i-plavki">Детские купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/tormoznye-shorty-zhenskie">Тормозные шорты</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-plyazh/zhenskiy-plyazhnyy-tekstil">Пляжные купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-plyazh/detskiy-plyazhnyy-tekstil/kupalnik-plyazhnyy-detskiy">Детские пляжные купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/kupalnik-dlya-beremennyh">Купальник для беременных</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki">Мужские плавки и шорты</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-plavki">Плавки мужские</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-plavki-antihlor">Плавки антихлор</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-dzhammery">Джаммеры</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/detskie-plavki">Плавки для мальчиков</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki-2">Плавки-шорты</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/shorty-plavatelnye">Шорты плавательные</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/detskie-plavki-shorty">Плавки-шорты детские</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/plavki-sportivnye-yuniorskie">Юниорские плавки и шорты</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/obuv">Обувь для плавания</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/obuv/detskie-tapochki">Детская обувь</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/obuv-0">Женская обувь</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/obuv/muzhskie-tapki">Мужская обувь</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu">Обучение плаванию</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/zhilet-naduvnoy">Жилет надувной</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/igrushka">Игрушки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/krug">Круги надувные</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/matras">Матрасы</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/myach">Мячи</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/narukavniki">Нарукавники</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/vodnoe-polo">Водное поло</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/vodnoe-polo/inventar-dlya-vodnogo-polo">Инвентарь</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/vodnoe-polo/kupalnik-dlya-vodnogo-polo-antihlor">Купальники</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/vodnoe-polo/plavki-dlya-vodnogo-polo-antihlor">Плавки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/vodnoe-polo/shapochki-dlya-vodnogo-polo">Шапочки</a></li>
+                  </ul>
+                </li>
+                <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/akvafitnes">Аквафитнес</a></li>
+                <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-fitnesa">Фитнес инвентарь</a></li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/snorkelling">Сноркелинг и дайвинг</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/snorkelling/lasty">Ласты</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/snorkelling/maska">Макси</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/snorkelling/trubka">Трубки</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/plyazhnye-shorty">Пляжные шорты</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/plyazhnye-shorty/shorty-muzhskie">Мужские шорты</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/plyazhnye-shorty/shorty-zhenskie">Женские шорты</a></li>
+                  </ul>
+                </li>
+                <li><a class="item open-childs" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda">Спортивная одежда</a>
+                  <ul class="childs slide-content">
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/futbolka">Футболки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/muzhskoy-sportivnyy-zhaket">Мужские куртки и толстовки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/muzhskie-sportivnye-bryuki">Мужские спортивные брюки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/zhenskie-sportivnye-bryuki">Женские спортивные брюки</a></li>
+                    <li><a class="item" href="http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/zhenskiy-sportivnyy-zhaket">Женская спортивная куртка</a></li>
+                  </ul>
+                </li>
+                <li><a class="item" href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/suvenirnaya-produkciya">Сувенирная продукция</a></li>
+              </ul>
+            </div>
+            <ul id="navigation">
+              <li class="closer">
+                <div class="close-nav"></div>
+              </li>
+              <li><span class="call-city-picker a hidden-md hidden-lg"><i class="fa fa-map"></i> Город:<span class="location-city">Москва</span></span></li>
+              <li><a class="catalog-opener hidden-md hidden-lg"><i class="fa fa-star"></i> Каталог<span class="right-arrow"></span></a></li>
+              <li><a class="hidden-md hidden-lg" href="/catalog/"><i class="fa fa-tag"></i> Спецпредложения</a></li>
+              <li><a class="hidden-md hidden-lg" href="/login"><i class="fa fa-user"></i> Вход / Регистрация</a></li>
+              <li class="small"><a href="http://yii2.madwave.ru/world/">Блог</a></li>
+              <li class="small"><a href="/about">О нас</a></li>
+              <li class="small"><a href="/about/info/delivery">Доставка</a></li>
+              <li class="small"><a href="/about/magazini">Адреса магазинов</a></li>
+              <li class="small"><a href="http://b2b.madwave.ru/">B2B</a></li>
+              <li class="small"><a href="/kak-poluchit-kartu-postoyannogo-pokupatelya"><span class="hidden-xs hidden-sm hidden-md">Скидочная</span>  карта<sup class="hidden-xs hidden-sm hidden-md">ограничено</sup></a></li>
+            </ul>
+          </nav>
+          <div class="pull-right nav-right">
+            <div class="hidden-xs hidden-sm"><a href="/login"><i class="fa fa-user"></i></a></div><span class="pipe hidden-xs hidden-sm">|</span>
+            <div><a class="cart-container" href="/checkout/cart/index"><i class="fa fa-shopping-bag"><span class="cart-counter"></span></i></a></div><span class="pipe hidden-xs hidden-sm">|</span>
+            <div id="search"><i class="search-submit fa fa-search"></i>
+              <form action="/catalog/search" method="get">
+                <input id="search-autocomplete-desktop" name="keywords" type="text">
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <style>
+        .list-group-item.active a {
+        color: #fff;
+        }
+        .attachment > iframe {
+        width: 100%;
+        }
+        hr {
+        margin: 50px 0;
+        }
+      </style>
+      <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+      <script src="https://yastatic.net/share2/share.js"></script>
+      <div class="article-hero" style="background-image: url('http://localhost:3000/images/article-hero.png')">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="article-hero-crumbs"><a href="#">Главная</a><span class="crumbs-separator">></span><a href="#">Блог</a><span class="crumbs-separator">></span><a class="active" href="#">Tour de France и Madwave как мы были на 1 месте</a></div>
+              <div class="article-metrics">
+                <div class="article-watch"><i class="ico ico-article-watch"></i><span>378</span></div>
+                <div class="article-likes"><i class="ico ico-article-likes"></i><span>231</span></div>
+              </div>
+              <h1 class="article-heading">Tour de France и Madwave <br> как мы были на 1 месте</h1>
+              <div class="article-share">
+                <div class="ya-share2" data-services="vkontakte,facebook,gplus,twitter" data-counter="" data-url="http://yii2.madwave.ru/world/start-v-plavanii-pryzhok-v-vodu" data-title="Старт в плавании - прыжок в воду"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- NEW MARKUP-->
+      <div class="container blog-page blog-page--inner">
+        <div class="row">
+          <div class="col-md-8 article-content">
+            <p>Идеология выстраивания бренда трансформирует потребительский рынок. VIP-мероприятие повсеместно позиционирует медиамикс. Надо сказать, что точечное воздействие концентрирует медиамикс, осознавая социальную ответственность бизнеса.</p>
+            <p>Promotion-кампания откровенна. Более того, партисипативное планирование амбивалентно. Коммуникация, пренебрегая деталями, детерминирует общественный анализ рыночных цен. Маркетингово-ориентированное издание допускает повседневный медийный канал.</p>
+            <p>Потребительская база, не меняя концепции, изложенной выше, упорядочивает инвестиционный продукт. Тем не менее, концепция новой стратегии изоморфна времени. Дело в том, что диктат потребителя транслирует конструктивный пресс-клиппинг. Как предсказывают футурологи клиентский спрос программирует эмпирический продуктовый ассортимент. Продукт программирует сублимированный фактор коммуникации.</p><img class="img-responsive" src="http://localhost:3000/images/article-banner.png">
+            <div class="article-content-share">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="article-content-share-title">Поделиться с друзьями</div>
+                  <div class="article-share m0">
+                    <div class="ya-share2" data-services="vkontakte,facebook,gplus,twitter" data-counter="" data-url="http://yii2.madwave.ru/world/start-v-plavanii-pryzhok-v-vodu" data-title="Старт в плавании - прыжок в воду"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4 text-right hidden-xs"><a class="btn btn-outline mt30" href="#sectionComment">2 Комментария</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <form class="search-in-blog" action="http://yii2.madwave.ru/world/">
+              <label for="search_in_blog">Поиск в блогах</label>
+              <div class="row">
+                <div class="col-xs-9">
+                  <input class="form-control rad0 w100" id="search_in_blog" name="BlogPostSearch[keywords]" type="text" value="" placeholder="Введите запрос">
+                </div>
+                <div class="col-xs-3 pl0">
+                  <input class="btn btn-primary w100" type="submit" value="Поиск">
+                </div>
+              </div>
+            </form>
+            <div class="pinned-post">
+              <header class="zigzag">
+                <div class="label label-primary">Пост месяца</div>
+                <div class="inline-block"><b>
+                    <div class="fa fa-eye color-primary"></div> 4</b><br><small>просмотров</small></div>
+              </header>
+              <div class="content">
+                <div class="attachment">
+                  <p><img src="http://yii2.madwave.ru/uploads/gidrokostyumy_dlya_plavaniya.jpg" alt="gidrokostyumy_dlya_plavaniya.jpg"></p>
+                </div>
+                <h3><a href="http://yii2.madwave.ru/world/tehnologii-i-produkty/kak-vybrat-gidrokostyum">Как выбрать гидрокостюм для плавания</a></h3>
+                <p>При выборе гидрошорт или гидрокостюма пловцы руководствуются прежде всего удобством и комфортом использования при заплыве на ту или иную</p>
+              </div>
+            </div>
+            <div class="aside-widget">
+              <h4 class="zigzag">Популярные теги</h4>
+              <p><a href="/world/news">Новости</a><a href="/world/madwave-akademiya">MadWave Академия</a><a href="/world/tehnologii-i-produkty">Технологии и продукты</a><a href="/world/madwave-akademiya/tehnika-i-skorost">Техника и скорость</a><a href="/world/madwave-akademiya/uprazhneniya">Упражнения</a><a href="/world/madwave-akademiya/sovety">Советы</a><a href="/world/tehnologii-i-produkty/novinki">Новинки</a></p>
+            </div>
+            <div class="aside-widget">
+              <h4 class="zigzag">Описание блога</h4>
+              <p>
+                Таким образом реализация намеченных плановых заданий представляет собой интересный эксперимент
+                проверки форм развития. Равным образом новая модель организационной деятельности играет важную роль
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- NEW CONTENT::COMMENTS SECTION-->
+        <div class="row">
+          <div class="col-sm-8">
+            <h2>Комментарии</h2>
+            <div class="comment" data-id="1">
+              <div class="row">
+                <div class="col-xs-2 col-sm-2">
+                  <div class="comment-img"><img class="img-responsive" src="http://localhost:3000/images/comment-ava.png"></div>
+                </div>
+                <div class="col-xs-10 col-sm-10">
+                  <div class="comment-author">Алексей Воеводин</div>
+                  <div class="comment-content">Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.</div>
+                  <div class="comment-timestamp">Вчера в 21:00</div>
+                  <div class="comment-actions"><a href="#">Ответить</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="comment" data-id="2">
+              <div class="row">
+                <div class="col-xs-2 col-sm-2">
+                  <div class="comment-img"><img class="img-responsive" src="http://localhost:3000/images/comment-ava.png"></div>
+                </div>
+                <div class="col-xs-10 col-sm-10">
+                  <div class="comment-author">Алексей Воеводин</div>
+                  <div class="comment-content">Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.</div>
+                  <div class="comment-timestamp">Вчера в 21:00</div>
+                  <div class="comment-actions"><a href="#">Ответить</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- form-->
+        <div class="row">
+          <div class="col-sm-6 col-lg-4" id="sectionComment">
+            <form class="comment-form" action="">
+              <div class="form-group form-group--bold-label">
+                <label>Укажите e-mail, чтобы оставить комментарий</label>
+                <input class="form-control rad0" placeholder="Ваш email">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control rad0" placeholder="Ваш комментарий"></textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-lg btn-primary" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="subscribe">
+      <div class="container p0">Подписаться на новости
+        <form id="w1" action="/site/mail-scribe" method="post">
+          <input type="hidden" name="_csrf" value="R3RxSjBpSjcePzNzCSUvdH4dHgNZP3hYBkxADQQlBWETMCEsc1EtYQ==">
+          <div class="form-group field-subscribe-email required">
+            <input id="subscribe-email" type="text" name="Subscribe[email]" placeholder="Ваш e-mail">
+            <div class="help-block"></div>
+          </div>
+          <input type="submit" value="Подписаться">
+        </form>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="container p0">
+        <div class="col-md-3 hidden-xs hidden-sm">
+          <div class="paysystems"><i class="maestro"></i><i class="paypal"></i><i class="mastercard"></i><i class="visa"></i></div>
+        </div>
+        <div class="col-md-4 contact p0 text-center-xs">Бесплатный звонок по РФ<span>8 800 100 57 19</span><br>                Ежедневно, с 09:00 до 20:00 МСК</div>
+        <div class="col-md-5 p0 footer-links text-center-xs"><a href="/about/franchise">Франчайзинг</a><a href="/about/info/contacts">Контакты</a><a href="/about/info-panel/discount-offers">Экономия до 40%</a><a href="/about/info/returns-exchange">Возврат и обмен</a><a href="/about/info/sizes">Размерная сеткdа</a></div>
+      </div>
+    </section>
+    <section id="sub-footer">
+      <div class="sub">
+        <div class="container p0">
+          <div class="col-md-3">
+            <div class="logo"></div>
+          </div>
+          <div class="col-md-9 text-center-xs"><a href="#">Все права зщищены</a><br class="visible-xs"><span><span class="hidden-xs">Адрес:</span> Санкт-Петербург, Индустриальный Проспект, 70</span>
+            <div class="goHome pull-right">В начало</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-85538552-1', 'auto');
+      ga('require', 'ec');
+    </script>
+    <script src="/assets/3fdcd303/jquery.min.js"></script>
+    <script src="/assets/eff483b6/yii.js"></script>
+    <script src="/js/jquery.elevateZoom.min.js"></script>
+    <script src="/js/product_view.min.js"></script>
+    <script src="/js/autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <script src="/js/slick/slick.min.js"></script>
+    <script src="/js/theia-sticky-sidebar.min.js"></script>
+    <script src="/js/bootstrap/custom.min.js"></script>
+    <script src="/assets/eff483b6/yii.validation.js"></script>
+    <script src="/assets/eff483b6/yii.activeForm.js"></script>
+    <!-- add main.js-->
+    <script type="text/javascript" src="http://localhost:3000/js/main.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+      ga('ec:addProduct', {"id":"M0727 01","name":"CORE ALIGNMENT","category":"Калабашка","brand":"Mad Wave","variant":"M0727 01 0 00W"}); ga('ec:setAction', 'detail');
+      ga('ec:addImpression', {"id":"M1431 02","name":"Jammer PBT","category":"Мужские джаммеры антихлор","brand":"Mad Wave","variant":"M1431 02 5 01W","list":"C этим товаром покупают"})
+      ga('ec:addImpression', {"id":"M0741 01","name":"Positive Drive","category":"Ласты для брасса","brand":"Mad Wave","variant":"M0741 01 4 00W","list":"C этим товаром покупают","position":1})
+      ga('ec:addImpression', {"id":"M0320 03","name":"Admiral","category":"Мужские тапки","brand":"Mad Wave","variant":"M0320 03 8 01W","list":"C этим товаром покупают","position":2})
+      ga('ec:addImpression', {"id":"M0746 07","name":"FREESTYLE","category":"Лопатки","brand":"Mad Wave","variant":"M0746 07 0 01W","list":"C этим товаром покупают","position":3})
+      $('body')
+      .on('click', '#city-picker', function() {
+      if (!$('.pac-container').length) {
+      placesAutocomplete();
+      }
+      })
+      .on('click', '.call-city-picker', function() {
+      $('#navigation')
+      .removeClass('pushed')
+      .removeClass('opened');
+      $('#city-picker').modal('show');
+      })
+      .on('click', '.set-city', function() {
+      $('.set-city').removeClass('active');
+      $(this).addClass('active');
+      setLocation($(this).data('city'));
+      })
+      ;
+      function setLocation(input) {
+      $.ajax({
+      type: "POST",
+      url:  '/citydetector/ajax/set-location',
+      data: {input: input},
+      success: function(response){
+      $('.location-city')
+      .text(response)
+      .val(response);
+      $('#city-picker').modal('hide');
+      location.reload();
+      },
+      error: function(error){console.log(error)}
+      });
+      }
+      function placesAutocomplete() {
+      var input = document.getElementById('city-picker-input');
+      var options = {
+      types: ['(cities)'],
+      componentRestrictions: {country: 'ru'}
+      };
+      autocomplete = new google.maps.places.Autocomplete(input, options);
+      google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      $('.set-city').removeClass('active');
+      setLocation($('#city-picker-input').val());
+      });
+      }
+      jQuery('#w1').yiiActiveForm([{"id":"subscribe-email","name":"email","container":".field-subscribe-email","input":"#subscribe-email","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Email»."});yii.validation.email(value, messages, {"pattern":/^[a-zA-Z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,"fullPattern":/^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/,"allowName":false,"message":"Значение «Email» не является правильным email адресом.","enableIDN":false,"skipOnEmpty":1});}}], []);
+      });
+    </script>
+    <script src="/js/custom.min.js"></script>
+    <script>ga('send', 'pageview');</script>
+  </body>
+</html>
