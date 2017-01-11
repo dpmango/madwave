@@ -1,0 +1,173 @@
+doctype html
+html(lang="ru-RU")
+  include shared/head.pug
+
+  body.world.index
+    // TEMP
+    <script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+
+    #wrap
+      include shared/header.pug
+      style.
+        .list-group-item.active a {
+        color: #fff;
+        }
+        .attachment > iframe {
+        width: 100%;
+        }
+        hr {
+        margin: 50px 0;
+        }
+      script(src='https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js')
+      script(src='https://yastatic.net/share2/share.js')
+      .article-hero(style="background-image: url('http://localhost:3000/images/article-hero.png')")
+        .container
+          .row
+            .col-sm-12
+              .article-hero-crumbs
+                a(href="#") Главная
+                span.crumbs-separator >
+                a(href="#") Блог
+                span.crumbs-separator >
+                a.active(href="#") Tour de France и Madwave как мы были на 1 месте
+              .article-metrics
+                .article-watch
+                  i.ico.ico-article-watch
+                  span 378
+                .article-likes
+                  i.ico.ico-article-likes
+                  span 231
+              h1.article-heading Tour de France и Madwave <br> как мы были на 1 месте
+              .article-share
+                .ya-share2(data-services='vkontakte,facebook,gplus,twitter', data-counter='', data-url='http://yii2.madwave.ru/world/start-v-plavanii-pryzhok-v-vodu', data-title='Старт в плавании - прыжок в воду')
+                //- .ya-share2.ya-share2_inited(data-services='vkontakte,facebook,gplus,twitter', data-counter='', data-url='http://yii2.madwave.ru/world/madwave-akademiya/sovety/6-poleznyh-sovetov-po-uhodu-za-volosami-pri-zanyatiyah-v-basseyne', data-title='6 полезных советов по уходу за волосами при заняти в бассейне')
+                //- .ya-share2__container.ya-share2__container_size_m
+                //-   ul.ya-share2__list.ya-share2__list_direction_horizontal
+                //-     li.ya-share2__item.ya-share2__item_service_vkontakte
+                //-       a.ya-share2__link(href='http://vk.com/share.php?url=http%3A%2F%2Fyii2.madwave.ru%2Fworld%2Fmadwave-akademiya%2Fsovety%2F6-poleznyh-sovetov-po-uhodu-za-volosami-pri-zanyatiyah-v-basseyne&title=6%20%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D1%83%D1%85%D0%BE%D0%B4%D1%83%20%D0%B7%D0%B0%20%D0%B2%D0%BE%D0%BB%D0%BE%D1%81%D0%B0%D0%BC%D0%B8%20%D0%BF%D1%80%D0%B8%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%20%D0%B2%20%D0%B1%D0%B0%D1%81%D1%81%D0%B5%D0%B9%D0%BD%D0%B5&description=&image=&utm_source=share2', rel='nofollow', target='_blank', title='ВКонтакте')
+                //-         span.ya-share2__badge
+                //-           span.ya-share2__icon
+                //-           span.ya-share2__counter 0
+                //-         span.ya-share2__title ВКонтакте
+                //-     li.ya-share2__item.ya-share2__item_service_facebook
+                //-       a.ya-share2__link(href='https://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fyii2.madwave.ru%2Fworld%2Fmadwave-akademiya%2Fsovety%2F6-poleznyh-sovetov-po-uhodu-za-volosami-pri-zanyatiyah-v-basseyne&utm_source=share2', rel='nofollow', target='_blank', title='Facebook')
+                //-         span.ya-share2__badge
+                //-           span.ya-share2__icon
+                //-           span.ya-share2__counter 0
+                //-         span.ya-share2__title Facebook
+                //-     li.ya-share2__item.ya-share2__item_service_gplus
+                //-       a.ya-share2__link(href='https://plus.google.com/share?url=http%3A%2F%2Fyii2.madwave.ru%2Fworld%2Fmadwave-akademiya%2Fsovety%2F6-poleznyh-sovetov-po-uhodu-za-volosami-pri-zanyatiyah-v-basseyne&utm_source=share2', rel='nofollow', target='_blank', title='Google+')
+                //-         span.ya-share2__badge
+                //-           span.ya-share2__icon
+                //-           span.ya-share2__counter 0
+                //-         span.ya-share2__title Google+
+                //-     li.ya-share2__item.ya-share2__item_service_twitter
+                //-       a.ya-share2__link(href='https://twitter.com/intent/tweet?text=6%20%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D1%85%20%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%20%D0%BF%D0%BE%20%D1%83%D1%85%D0%BE%D0%B4%D1%83%20%D0%B7%D0%B0%20%D0%B2%D0%BE%D0%BB%D0%BE%D1%81%D0%B0%D0%BC%D0%B8%20%D0%BF%D1%80%D0%B8%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%20%D0%B2%20%D0%B1%D0%B0%D1%81%D1%81%D0%B5%D0%B9%D0%BD%D0%B5&url=http%3A%2F%2Fyii2.madwave.ru%2Fworld%2Fmadwave-akademiya%2Fsovety%2F6-poleznyh-sovetov-po-uhodu-za-volosami-pri-zanyatiyah-v-basseyne&hashtags=&utm_source=share2', rel='nofollow', target='_blank', title='Twitter')
+                //-         span.ya-share2__badge
+                //-           span.ya-share2__icon
+                //-         span.ya-share2__title Twitter
+                //-   iframe.ya-share2__iframe(src='https://yastatic.net/share2/v-1.15.3/frame.html?namespace=ya-share2.0.8238192460254552', style='border: 0; display: none;position: absolute; left: -9999px;')
+
+
+      // NEW MARKUP
+      .container.blog-page.blog-page--inner
+        .row
+          .col-md-8.article-content
+            p Идеология выстраивания бренда трансформирует потребительский рынок. VIP-мероприятие повсеместно позиционирует медиамикс. Надо сказать, что точечное воздействие концентрирует медиамикс, осознавая социальную ответственность бизнеса.
+
+            p Promotion-кампания откровенна. Более того, партисипативное планирование амбивалентно. Коммуникация, пренебрегая деталями, детерминирует общественный анализ рыночных цен. Маркетингово-ориентированное издание допускает повседневный медийный канал.
+
+            p Потребительская база, не меняя концепции, изложенной выше, упорядочивает инвестиционный продукт. Тем не менее, концепция новой стратегии изоморфна времени. Дело в том, что диктат потребителя транслирует конструктивный пресс-клиппинг. Как предсказывают футурологи клиентский спрос программирует эмпирический продуктовый ассортимент. Продукт программирует сублимированный фактор коммуникации.
+
+            img.img-responsive(src="http://localhost:3000/images/article-banner.png")
+
+            .article-content-share
+              .row
+                .col-sm-8
+                  .article-content-share-title Поделиться с друзьями
+                  .article-share.m0
+                    .ya-share2(data-services='vkontakte,facebook,gplus,twitter', data-counter='', data-url='http://yii2.madwave.ru/world/start-v-plavanii-pryzhok-v-vodu', data-title='Старт в плавании - прыжок в воду')
+                .col-sm-4.text-right.hidden-xs
+                  a.btn.btn-outline.mt30(href="#sectionComment") 2 Комментария
+
+          .col-md-4
+            form.search-in-blog(action='http://yii2.madwave.ru/world/')
+              label(for='search_in_blog') Поиск в блогах
+              .row
+                .col-xs-9
+                  input#search_in_blog.form-control.rad0.w100(name='BlogPostSearch[keywords]', type='text', value='', placeholder='Введите запрос')
+                .col-xs-3.pl0
+                  input.btn.btn-primary.w100(type='submit', value='Поиск')
+            .pinned-post
+              header.zigzag
+                .label.label-primary
+                  | Пост месяца
+                .inline-block
+                  b
+                    .fa.fa-eye.color-primary
+                    |  4
+                  br
+                  small просмотров
+              .content
+                .attachment
+                  p
+                    img(src='http://yii2.madwave.ru/uploads/gidrokostyumy_dlya_plavaniya.jpg', alt='gidrokostyumy_dlya_plavaniya.jpg')
+                h3
+                  a(href='http://yii2.madwave.ru/world/tehnologii-i-produkty/kak-vybrat-gidrokostyum') Как выбрать гидрокостюм для плавания
+                p
+                  | При выборе гидрошорт или гидрокостюма пловцы руководствуются прежде всего удобством и комфортом использования при заплыве на ту или иную
+            .aside-widget
+              h4.zigzag Популярные теги
+              p
+                a(href='/world/news') Новости
+                a(href='/world/madwave-akademiya') MadWave Академия
+                a(href='/world/tehnologii-i-produkty') Технологии и продукты
+                a(href='/world/madwave-akademiya/tehnika-i-skorost') Техника и скорость
+                a(href='/world/madwave-akademiya/uprazhneniya') Упражнения
+                a(href='/world/madwave-akademiya/sovety') Советы
+                a(href='/world/tehnologii-i-produkty/novinki') Новинки
+            .aside-widget
+              h4.zigzag Описание блога
+              p
+                | Таким образом реализация намеченных плановых заданий представляет собой интересный эксперимент
+                | проверки форм развития. Равным образом новая модель организационной деятельности играет важную роль
+
+        // NEW CONTENT::COMMENTS SECTION
+        .row
+          .col-sm-8
+            h2 Комментарии
+            .comment(data-id="1")
+              .row
+                .col-xs-2.col-sm-2
+                  .comment-img
+                    img.img-responsive(src="http://localhost:3000/images/comment-ava.png")
+                .col-xs-10.col-sm-10
+                  .comment-author Алексей Воеводин
+                  .comment-content Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                  .comment-timestamp Вчера в 21:00
+                  .comment-actions
+                    a(href="#") Ответить
+            .comment(data-id="2")
+              .row
+                .col-xs-2.col-sm-2
+                  .comment-img
+                    img.img-responsive(src="http://localhost:3000/images/comment-ava.png")
+                .col-xs-10.col-sm-10
+                  .comment-author Алексей Воеводин
+                  .comment-content Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                  .comment-timestamp Вчера в 21:00
+                  .comment-actions
+                    a(href="#") Ответить
+        // form
+        .row
+          .col-sm-6.col-lg-4#sectionComment
+            form.comment-form(action="")
+              .form-group.form-group--bold-label
+                label Укажите e-mail, чтобы оставить комментарий
+                input.form-control.rad0(placeholder="Ваш email")
+              .form-group
+                textarea.form-control.rad0(placeholder="Ваш комментарий")
+              .form-group
+                button.btn.btn-lg.btn-primary(type="submit") Отправить
+
+    include shared/footer.pug

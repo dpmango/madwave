@@ -1,0 +1,221 @@
+
+// GOODS TESTIMONIALS
+.product
+  &-tabs
+    text-align: center
+    a
+      display: inline-block
+      background: #ececec
+      padding: 10px 30px
+      color: #3c3c3c
+      text-transform: uppercase
+      font-size: 14px
+      margin-right: 10px
+      margin-left: 10px
+      position: relative
+      @include responsive-max($xs)
+        display: block
+        margin-bottom: 5px
+      &.active
+        background: #000000
+        color: white
+        .fa
+          display: block
+          position: absolute
+          color: #000
+          left: 50%
+          font-size: 28px
+          transform: translateX(-50%)
+          bottom: -17px
+          @include responsive-max($xs)
+            display: none
+
+      .fa
+        display: none
+
+
+    &-content
+      display: none
+      &.active
+        display: block
+      .fl-r:first-child
+        @include responsive-max($xs)
+          float: none
+          margin-top: 10px
+
+  &-review-summary
+    border: 1px solid $borderColor
+    padding: 40px
+    margin-top: 30px
+    @include responsive-max($xs)
+      padding: 15px 20px
+  &-review
+    &-sum
+      color: #cccccc
+      font-size: 47px
+      font-weight: 600
+      line-height: 1
+    &-stars
+      margin-top: 2px
+      .fa-star
+        color: #63aecc
+        margin-right: 5px
+    &-based
+      font-size: 13px
+      margin-top: 10px
+    &-char
+      text-align: center
+      @include responsive-max($xs)
+        margin-top: 10px
+      img
+        padding-top: 8px
+        padding-bottom: 8px
+      .fa
+        font-size: 70px
+        @include responsive-max($xs)
+          font-size: 50px
+        &.c_blue
+          color: #63becc
+        &.c_green
+          color: #72cb9e
+    &-rate
+      margin-top: 5px
+      font-size: 40px
+      line-height: 1
+      font-weight: 600
+      text-align: center
+      @include responsive-max($xs)
+        font-size: 30px
+    &-name
+      font-size: 13px
+      text-align: center
+
+  // product testimonials
+  &-testimonial
+    &-author
+      font-size: 18px
+      font-weight: 500
+      span
+        color: #bfbfbf
+        @include responsive-max($xs)
+          display: block
+      img
+        display: inline-block
+        margin-top: -7px
+        margin-left: 10px
+    .col-sm-2
+      @include responsive-max($xs)
+        padding-left: 30px !important
+    &-date
+      margin-top: 10px
+      margin-bottom: 20px
+      font-size: 16px
+      color: #c7c7c7
+    &-char
+      font-weight: 500
+      margin-bottom: 10px
+      span
+        color: #c7c7c7
+        font-weight: 400
+        display: inline-block
+        padding-left: 5px
+    &-rating
+      margin-bottom: 5px
+      .label
+        display: block
+        color: $fontColor
+        text-align: left
+        float: none
+        padding: 0
+        margin: auto
+        margin-bottom: 5px
+      span
+        display: inline-block
+        font-size: 13px
+        padding-left: 5px
+      .fa-star
+        color: $color_primary
+        padding-right: 2px
+        &.no-fill
+          color: #b2b2b2
+
+    &-content
+      background: #f9f9f9
+      padding: 30px
+      @include responsive-max($xs)
+        padding: 20px 10px
+      .col-sm-6.text-right
+        @include responsive-max($xs)
+          text-align: left
+          margin-top: 10px
+          padding-left: 50px
+      .fa
+        float: left
+        font-size: 18px
+        padding-top: 5px
+      .fa-plus, .fa-question
+        color: #b5cc47
+      .fa-minus
+        color: #fd3a3a
+      .fa-comment-o
+        color: #bcbcbc
+      .fa-thumbs-up
+        color: #63aecc
+      .fa-thumbs-down
+        color: #bcbcbc
+      &-type
+        padding-right: 80px
+        @include responsive-max($sm)
+          padding-right: 40px
+
+        @include responsive-max($xs)
+          padding-right: 0
+        p
+          padding-bottom: 10px
+          padding-left: 40px
+          font-size: 16px
+          font-weight: 500
+          color: #7f7f7f
+          line-height: 26px
+    &-thumbs
+      margin-top: 15px
+      padding-left: 40px
+      .control
+        display: inline-block
+        margin-right: 10px
+        cursor: pointer
+        .fa
+          margin-right: 7px
+        span
+          display: inline-block
+          vertical-align: -5px
+        &:hover
+          opacity: .7
+
+    &-controls
+      padding-top: 7px
+      .btn
+        margin-right: 15px
+
+      .fa
+        float: none
+        margin-right: 10px
+        vertical-align: 0
+
+    &-replies
+      border-top: 1px solid $borderColor
+      padding-top: 30px
+      margin-top: 30px
+      .product-testimonial-author
+        padding-left: 40px
+      .product-testimonial-date
+        padding-left: 40px
+      &-toggle
+        color: #7f7f7f
+        text-decoration: underline
+
+    &-more
+      .btn
+        margin-right: 15px
+      .fa-refresh
+        margin-right: 10px

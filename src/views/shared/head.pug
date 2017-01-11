@@ -1,0 +1,18 @@
+head
+  <base href="http://yii2.madwave.ru/">
+  meta(charset='UTF-8')
+  title CORE ALIGNMENT | Калабашка | Mad Wave
+  meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+  meta(name='csrf-param', content='_csrf')
+  meta(name='csrf-token', content='R3RxSjBpSjcePzNzCSUvdH4dHgNZP3hYBkxADQQlBWETMCEsc1EtYQ==')
+  meta(name='description')
+  link(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki/kalabashka/core-alignment', rel='canonical')
+  link(href='/css/style.min.css', rel='stylesheet')
+  // New styles are below
+  link(href='http://localhost:3000/css/style.css', rel='stylesheet')
+  link(rel='icon', type='image/png', href='/favicon.png')
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?language=ru-RU&key=AIzaSyCBzSmFXDwXLHoq-RaGsHlELpPqVXHQ3vM&libraries=places&callback=gmapInitializeer')
+  script.
+    function gmapInitializeer() {
+    if (typeof initMap == 'function') initMap();
+    }

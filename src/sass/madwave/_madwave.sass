@@ -1,0 +1,1260 @@
+@charset "UTF-8"
+
+@import "vars"
+@import "mixins"
+@import "general"
+@import "layout"
+@import "nouislider"
+@import "checkout"
+@import "category_page"
+@import "blog"
+
+.alert
+  margin-bottom: -45px !important
+  position: relative
+  z-index: 2
+  padding: 11px !important
+
+#show-more
+  display: block
+  width: 100%
+  text-align: center
+  border: 1px solid #dcdcdc
+  padding: 15px
+  font-size: 12px
+  line-height: 1
+  text-transform: uppercase
+  cursor: pointer
+  position: relative
+  top: -63px
+  background: #fff
+  box-shadow: 0px -30px 50px 60px rgba(255,255,255,.9)
+  margin-bottom: -45px
+  @include responsive($md)
+    margin-bottom: -63px
+  .fa
+    margin-right: 15px
+
+
+#main-banner
+  width: 100%
+  height: auto
+  margin-bottom: 60px
+  overflow: hidden
+  top: -3px
+  @include responsive($md)
+    height: 630px
+  h3, h2
+    text-transform: uppercase
+  h3, h2, p
+    cursor: default
+  h3
+    font-size: 16px
+    margin-bottom: 40px
+    margin-top: 0
+    letter-spacing: 3px
+  h2
+    font-size: 30px
+    margin-bottom: 40px
+    font-weight: bold
+    line-height: 1
+    @include responsive($md)
+      font-size: 58px
+      line-height: 1.1
+  .small
+    color: #fff
+  p
+    display: block
+    min-height: 112px
+    font-size: 20px
+    margin-bottom: 30px
+    font-weight: 300
+    @include responsive($md)
+      font-size: 22px
+      margin-bottom: 45px
+  .btn-danger
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 14px
+    padding: 20px
+  .fa-chevron-right
+    margin-left: 15px
+  .slick-list
+    width: 100%
+  .slick-arrow
+    display: none !important
+  .slick-dots
+    bottom: 15px
+    @include responsive($md)
+      bottom: 45px
+
+    li
+      button
+        background: #fff
+        height: 12px
+        width: 12px
+        border-radius: 100%
+        &:before
+          height: 12px
+          width: 12px
+          line-height: 12px
+          opacity: 0
+    li.slick-active button:before
+      opacity: .75
+
+  .banner
+    color: #fff
+    height: auto
+    padding-bottom: 60px
+    padding-top: 110px
+    text-align: center
+    @include responsive($md)
+      height: 630px
+      text-align: left
+
+  ._swimmer-face
+    background: url("../images/homepage_banner/swimmer-face.jpg") center center / cover no-repeat
+  ._forceshell-jump
+    background: url("../images/homepage_banner/forceshell_jumper.jpg") center center / cover no-repeat
+
+.pinned-item
+  display: block
+  background: #fff
+  box-shadow: 0 5px 30px -5px rgba(0,0,0,.2)
+  padding: 30px 20px
+  text-align: center
+  margin-bottom: 30px
+  .background
+    height: 220px
+    margin: -30px -20px 0 -20px
+    & > div
+      width: 120%
+      height: 120%
+      position: relative
+      left: -10%
+      top: -8%
+  h4
+    font-size: 30px
+    font-weight: 600
+    font-stretch: condensed
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 30px
+    margin-top: 35px
+    small
+      display: block
+      font-size: 15px
+      font-stretch: condensed
+      font-weight: 500
+      color: #a6a6a6
+      min-height: 30px
+      margin-bottom: 15px
+      @include responsive($md)
+        margin-bottom: 0
+  p
+    font-size: 16px
+    text-align: center
+    color: #292929
+    opacity: .7
+    margin-bottom: 25px
+  .btn
+    font-weight: 500
+    font-size: 14px
+    text-transform: uppercase
+    color: #a6a6a6
+
+
+#pinned-categories
+  padding: 60px 0
+  .pinned-item
+    color: inherit
+    text-decoration: none
+    .background
+      height: 270px
+    h4, p
+      text-align: left
+    h4
+      margin-top: 40px
+      margin-bottom: 15px
+      font-size: 18px
+    p
+      min-height: 38px
+      font-size: 14px
+      margin-bottom: 0
+
+.home-products > div:last-child
+  display: none
+  @include responsive($md)
+    display: block
+
+#home-heats
+  h2
+    margin-top: 30px
+    margin-bottom: 30px
+    font-weight: bold
+    font-size: 30px
+    text-transform: uppercase
+
+section.about
+  border-top: 1px solid #e6e6e6
+  padding: 60px 0 50px 0
+  text-align: center
+  h3
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 30px
+  p
+    font-size: 16px
+    color: #939393
+    line-height: 1.5
+    margin-bottom: 25px
+  a
+    text-transform: uppercase
+    text-decoration: underline
+    color: #4757dd
+
+
+.img_container
+  display: block
+  width: calc(100% - 30px)
+  height: 260px
+  margin: 0 auto
+  position: relative
+  cursor: pointer
+  text-align: center
+  overflow: hidden
+
+.img-container
+  height: 160px
+
+input[type="checkbox"].colorpick
+  display: none
+  &:checked + span.colorpick:after
+    content: '\2713'
+    display: block
+    width: 100%
+    height: 100%
+    text-align: center
+    font-size: 20px
+    position: relative
+    top: -8px
+
+.product-view
+  .colorpick
+    margin-right: 5px
+
+  .description
+    //height: 115px
+    //overflow: hidden
+    margin-bottom: 30px
+    position: relative
+    transition: .2s
+    .toggler
+      text-decoration: underline
+      position: absolute
+      bottom: 0
+      padding-top: 20px
+      display: block
+      background: #fff
+      color: #0000ff
+      cursor: pointer
+      width: 100%
+      transition: .2s
+      &:before
+        transition: .2s
+        content: "Полностью"
+    &.open
+      height: auto
+      .toggler
+        position: relative
+        &:before
+          content: "Скрыть описание"
+    & > div
+      padding: 20px 0
+
+
+
+.reset-colors
+  cursor: pointer
+.colorpick
+  display: block
+  background: #fff
+  cursor: pointer
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.2)
+  border: 3px solid #fff
+  width: 22px
+  height: 22px
+
+  border-radius: 100%
+  margin-top: 10px
+
+  &:hover
+    box-shadow: 0 0 0 0 rgba(0,0,0,.2)
+  &.filter
+    float: left
+    margin-bottom: 10px
+  &.filter.disabled
+    opacity: .2
+    cursor: default
+  &.active
+    box-shadow: inset 0 0 3px 0 rgba(0,0,0,.2)
+    border: 0
+  &.c0001
+    background: #000
+  &.c0002
+    background: #b8f250
+  &.c0003
+    background: #f8273d
+  &.c0005
+    background: #6d57cd
+  &.c0006
+    background: #6f635e
+  &.c0006
+
+  &.c0007
+    background: #bcbdc1
+
+  &.c0008
+    background: #808080
+  &.c0009
+    background: #3362c1
+  &.c0011
+    background: #fd884e
+
+  &.c0012,
+  &.c0004
+    background: #efefef
+
+  &.c0013
+    background: #c85ab0
+
+  &.c0014
+    background: #fc64aa
+  &.c0015
+    background: #ead6bf
+  &.c0016
+    background: #fff
+    border: 3px solid #f1f1f1
+    &.active
+      border: 0px
+  &.c0017
+    background: #6be7f7
+  &.c0018
+    background: #31a5be
+  &.c0019
+    background: #fcd64b
+  &.c0020
+
+  &.c0021
+    background: #984f00
+  &.c0024
+    background: #f2c5e6
+  &.c0023,
+  &.c0025
+    background: red /* not working, let's see some red */
+    background: -moz-linear-gradient( top , rgba(255, 0, 0, 1) 0%,rgba(255, 255, 0, 1) 15%,rgba(0, 255, 0, 1) 30%,rgba(0, 255, 255, 1) 50%,rgba(0, 0, 255, 1) 65%,rgba(255, 0, 255, 1) 80%,rgba(255, 0, 0, 1) 100%)
+    background: -webkit-gradient(linear,  left top,  left bottom,color-stop(0%, rgba(255, 0, 0, 1)),color-stop(15%, rgba(255, 255, 0, 1)),color-stop(30%, rgba(0, 255, 0, 1)),color-stop(50%, rgba(0, 255, 255, 1)),color-stop(65%, rgba(0, 0, 255, 1)),color-stop(80%, rgba(255, 0, 255, 1)),color-stop(100%, rgba(255, 0, 0, 1)))
+  &.c0026
+    background: #ff01ff
+  &.c0027
+
+  &.c0028
+
+  &.c0030
+    background: #f7696f
+  &.c0031
+
+  &.c0036
+    background: #3c5096
+  &.c0037
+    background: #2ac085
+  &.c0038
+    background: #ce8231
+
+.product-view
+  span.colorpick
+    display: inline-block
+  a
+    //font-weight: 600
+
+.product_list
+  .product_list_hr
+    float: left
+    width: 100%
+    hr
+      @include responsive($md)
+      margin-right: 15px
+
+.product_card_wrap
+  padding: 0px
+  border: 0px
+  box-shadow: none
+  border-radius: 1px
+  .product_card
+    margin: 15px
+    .colors
+      display: none
+      position: absolute
+      right: 22px
+      z-index: 1
+      transition: .5s
+      .colorpick
+        margin-bottom: 5px
+    //  margin-right: 0
+    //  margin-bottom: 10px
+    //  float: none
+    //  &.active
+    //    //margin-top: -4px
+    //  &.preview
+    //    margin-right: 0
+    //    margin-bottom: 10px
+    .title
+      height: 60px
+      line-height: 60px
+      color: $color_primary
+      text-align: center
+      &:hover
+        cursor: pointer
+
+      span
+        display: inline-block
+        vertical-align: middle
+        line-height: normal
+        color: $color_primary
+    .price
+      height: 26px
+      text-align: center
+      margin: 10px 0px
+      &.old_price
+        color: #ff0000
+        text-decoration: line-through
+      &.card-price
+        height: 26px
+        color: #00b0cc
+        font-size: 22px
+        span.sum
+          position: relative
+          top: -7px
+
+  &:hover
+    box-shadow: 0px 0px 0px 1px #b1b1b1
+    .colors
+      display: block
+
+
+  .btn-danger
+    background-color: #dd2e2e
+    border-color: #dd2e2e
+    &:hover
+      background-color: #ce2f2f
+      border-color: #ce2f2f
+.card-icon
+  color: #00b0cc
+  background: #fff
+  display: inline-block
+  font-size: 31px
+  margin-top: -2px
+  padding-right: 5px
+  span
+    font-size: 12px
+    background: #00b0cc
+    color: #fff
+    float: left
+    padding-left: 4px
+    margin-top: 13px
+    position: relative
+    margin-right: -32px
+    font-family: roboto
+.zoomWindow
+  margin-left: 30px
+  border: none !important
+
+.zoomLens
+  border: none !important
+  opacity: 0 !important
+
+#zoom
+  border: 1px solid #ddd
+  position: relative
+  z-index: -1
+  @include responsive($md)
+    z-index: 0
+
+.all_imgs
+  margin-right: -15px
+  margin-bottom: 15px
+  img
+    width: calc(25% - 15px)
+    margin: 0
+    padding: 0
+    cursor: pointer
+    border: 1px solid #ddd
+    margin-top: 15px
+    margin-right: 15px
+    float: left
+
+@media screen and (max-width: 990px)
+  .zoomContainer
+    display: none
+
+h1.onCover
+  text-transform: uppercase
+  margin-top: -43px
+  color: #fff
+  margin-left: 20px
+  font-size: 30px
+  letter-spacing: 0.8px
+
+#modal-close
+  display: none
+  position: fixed
+  background: rgba(0,0,0,.5)
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 99
+  transition: .3s
+
+#modal
+  position: fixed
+  top: 150px
+  z-index: 99
+  margin-left: calc(50% - 300px)
+
+#feature-content
+  width: 600px
+  margin: 0 auto
+  background: #fff
+  padding: 30px
+
+  img
+    width: 100%
+
+.pagination > .active > a
+  background-color: #00b0cc
+  border-color: #00b0cc
+  &:hover
+    background-color: #008aa0
+    border-color: #008aa0
+
+
+section.header
+  position: relative
+  &.collections
+    //background: url('../images/swimmer_3.png') center center no-repeat
+    background-size: cover
+    background: transparent
+  &.distribution
+    //background: url('../images/swimmer_4.png') center center no-repeat
+    background-size: cover
+    background: transparent
+  &:before
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    background: #000
+    position: absolute
+    opacity: .6
+    z-index: 0
+  h2
+    position: relative
+    z-index: 1
+    color: #fff
+    margin: 0px
+    padding: 100px 15px
+    strong
+      text-transform: uppercase
+    small
+      color: #fff
+      font-weight: 200
+
+#vmap
+  width: 100%
+  height: 200px
+  @include responsive($sm)
+    height: 550px
+
+.collection-container
+  figure
+    margin-bottom: 30px
+  img
+    width: 100%
+
+.btn-slide_filter
+  width: 100%
+  border-radius: 0
+  border: 2px solid #333
+  font-weight: bold
+  margin-bottom: 30px
+
+.catalog.view
+  .product_card span.colorpick
+    display: block
+
+.size-table
+  background: none !important
+  width: 100%
+
+
+.size-table td
+  color: #333
+
+.size-table th
+  background: #333
+  color: #fff
+  padding: 3px 15px
+  width: 180px
+  border-bottom: none !important
+
+.size-table td:not(:first-child)
+  font-size: 90%
+
+.size-table td:first-child
+  padding-left: 15px
+  font-weight: bold
+
+.changer
+  cursor: pointer
+
+.color-red
+  color: #ff0000 !important
+
+.table-first-td-bold td:first-child
+  font-weight: bold
+
+.table-first-td-60-per td:first-child
+  width: 60%
+
+#dpd-coast
+  min-height: 39px
+  min-width: 39px
+
+.nav.nav-tabs
+  text-align: center
+  margin-bottom: 30px
+  li
+    display: inline-block
+    float: none
+.nav-pills.nav-tabs
+  border-bottom: transparent
+  li
+    display: block
+    width: 100%
+    margin-bottom: 10px
+
+
+.ajax-loading,
+#filter-color-container,
+#filter-size-container
+  position: relative
+
+
+.ajax-loading:after,
+#filter-color-container:after,
+#filter-size-container:after,
+#variant:after,
+.product_card:after
+  content: "" !important
+  display: block !important
+  position: absolute !important
+  width: 100% !important
+  height: 100% !important
+  left: 0 !important
+  top: 0 !important
+  z-index: -1 !important
+
+  background: #fff url(../images/layout/preloader.gif) center 25% no-repeat !important
+  transition: .2s !important
+  opacity: 0 !important
+
+.ajax-loading.loading:after,
+#filter-color-container.loading:after,
+#filter-size-container.loading:after,
+#variant.loading:after,
+#dpd-coast.loading:after,
+.product_card.loading:after
+  opacity: .8 !important
+  z-index: 1 !important
+
+
+
+#checkout-delivery,
+#checkout-customer
+  padding-bottom: 100px
+
+
+.user.dropdown-toggle
+  background: transparent
+  border: none
+  padding: 1px
+  .caret
+    color: #bebebe
+    margin-top: 15px
+  &:hover,
+  &:focus,
+  &:active
+    .caret
+      color: #fff
+  &+.dropdown-menu
+    right: 0
+    left: inherit
+
+
+.add_to_cart-ajax
+  transition: .3s
+  &.complete
+    background: #5bab5b
+    border: transparent
+    &:before
+      content: 'ДОБАВЛЕНО '
+
+.account.profile
+  .edit-user-data
+    margin-left: 30px
+  label
+    color: #5e5e5e
+
+h3.hr
+  border-bottom: 1px solid #ccc
+  margin-bottom: 30px
+  padding-bottom: 15px
+
+
+
+.product
+  transition: .5s
+  //height: 436px //490px
+  min-width: 240px
+  border: 1px solid #eeeeee
+  margin-bottom: 30px
+  padding: 15px
+  .overflow
+    white-space: nowrap
+    overflow: hidden
+    display: block
+    text-overflow: ellipsis
+  .btn-add_to_cart
+    border-radius: 0
+    text-transform: uppercase
+    float: right
+    width: calc(50% - 7.5px)
+    transition: .5s
+    font-size: 20px
+    padding: 10px 0
+
+  hr
+    margin: 10px 0
+
+  .rating
+    margin-top: 10px
+    font-size: 18px
+    b
+      margin: 0 10px
+  .rating-stars
+    color: $color_primary
+
+  .caption
+    position: relative
+    width: 100%
+    margin-top: 10px
+    transition: .5s
+
+  .image
+    height: 298px
+    padding-top: 38px
+    text-align: center
+    position: relative
+    transition: .5s
+    overflow: hidden
+    img
+      height: 258px
+      transition: .5s
+
+  .fsize-1
+    font-size: 18px
+
+  .fsize-1.price
+    font-size: 24px
+
+  .fsize-2
+    font-size: 14px
+    color: #9a9a9a
+
+.aside
+  width: 100%
+  border: 8px solid #f0f0f0
+  padding: 35px 20px
+  margin-bottom: 30px
+  .title
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 10px
+
+  .title:after
+    content: ''
+    display: block
+    width: 38px
+    height: 5px
+    background: url("../images/layout/zig.png") center center no-repeat
+    margin: 15px auto
+
+  .title.zig-left:after
+    margin: 15px 0
+  a:not(.btn)
+    text-transform: uppercase
+    color: #4757dd
+    text-decoration: underline
+  h4
+    margin-top: 0
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 18px
+    margin-bottom: 15px
+    line-height: 1.5
+  .img
+    height: 170px
+    margin-bottom: 20px
+    img
+      height: 100%
+      width: auto
+      max-width: 100%
+  .prices
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 20px
+
+    span
+      text-decoration: line-through
+      color: #b1b1b1
+
+
+.pop-posts
+  h3
+    margin-bottom: 22px
+  .post
+    margin-bottom: 20px
+    img
+      float: left
+      margin-right: 8px
+      margin-right: 15px
+    a
+      color: #282828
+      font-size: 14px
+      &:hover, &:focus, &:active
+        color: #4757dd
+    .date
+      font-size: 14px
+      color: #999
+    h4
+      margin-bottom: 10px
+      margin-top: 5px
+      height: 38px
+      overflow: hidden
+
+.site-login
+  padding-bottom: 150px
+  h1 + hr
+    margin-bottom: 100px
+
+.auth-clients
+  padding: 0
+  & > li:last-child
+    margin-right: 0
+
+@media screen and (min-width: 480px ) and (max-width: 768px)
+  .product_card_wrap
+    width: 50% !important
+
+
+
+
+.page-buffer
+  height: 57px
+  @include responsive($md)
+    height: 0
+
+.site.error
+  .site-error
+    padding-bottom: 100px
+
+    h1.error-code
+      color: $color_primary
+      font-size: 145px
+      @include responsive($sm)
+        font-size: 200px
+      @include responsive($lg)
+        font-size: 250px
+    .error-message
+      @include responsive($md)
+        margin-top: 53px
+      @include responsive($lg)
+        margin-top: 56px
+        font-size: 80px
+
+.text-left-not-xs, .text-left-not-sm, .text-left-not-md, .text-left-not-lg
+  text-align: left
+
+.text-center-not-xs, .text-center-not-sm, .text-center-not-md, .text-center-not-lg
+  text-align: center
+
+.text-right-not-xs, .text-right-not-sm, .text-right-not-md, .text-right-not-lg
+  text-align: right
+
+.text-justify-not-xs, .text-justify-not-sm, .text-justify-not-md, .text-justify-not-lg
+  text-align: justify
+
+
+@media (max-width: 767px)
+  .text-left-not-xs, .text-center-not-xs, .text-right-not-xs, .text-justify-not-xs
+    text-align: inherit
+
+  .text-left-xs
+    text-align: left
+
+  .text-center-xs
+    text-align: center
+
+  .text-right-xs
+    text-align: right
+
+  .text-justify-xs
+    text-align: justify
+
+
+@media (min-width: 768px) and (max-width: 991px)
+  .text-left-not-sm, .text-center-not-sm, .text-right-not-sm, .text-justify-not-sm
+    text-align: inherit
+
+  .text-left-sm
+    text-align: left
+
+  .text-center-sm
+    text-align: center
+
+  .text-right-sm
+    text-align: right
+
+  .text-justify-sm
+    text-align: justify
+
+
+@media (min-width: 992px) and (max-width: 1199px)
+  .text-left-not-md, .text-center-not-md, .text-right-not-md, .text-justify-not-md
+    text-align: inherit
+
+  .text-left-md
+    text-align: left
+
+  .text-center-md
+    text-align: center
+
+  .text-right-md
+    text-align: right
+
+  .text-justify-md
+    text-align: justify
+
+@media (min-width: 1200px)
+  .text-left-not-lg, .text-center-not-lg, .text-right-not-lg, .text-justify-not-lg
+    text-align: inherit
+
+  .text-left-lg
+    text-align: left
+
+  .text-center-lg
+    text-align: center
+
+  .text-right-lg
+    text-align: right
+
+  .text-justify-lg
+    text-align: justify
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15
+  position: relative
+  min-height: 1px
+  padding-right: 15px
+  padding-left: 15px
+
+.col-xs-15
+  width: 20%
+  float: left
+
+@media (min-width: 768px)
+  .col-sm-15
+    width: 20%
+    float: left
+
+@media (min-width: 992px)
+  .col-md-15
+    width: 20%
+    float: left
+
+@media (min-width: 1200px)
+  .col-lg-15
+    width: 20%
+    float: left
+
+.testimonials
+  position: relative
+  &>img
+    position: absolute
+    float: left
+    width: 70px
+  blockquote
+    float: left
+    margin-left: 90px
+    width: calc(100% - 90px)
+    small:before
+      content: ''
+    > small:before
+      content: '\2014 \00A0'
+  textarea
+    width: 100%
+    resize: vertical
+    min-height: 100px
+    margin-bottom: 20px
+  .rating-stars
+    color: $color_primary
+    font-size: 130%
+
+$unchecked-star: "\2606"
+$unchecked-color: $color_primary
+$checked-star: "\2605"
+$checked-color: $color_primary
+.star-cb-group
+  font-size: 130%
+  unicode-bidi: bidi-override
+  direction: rtl
+  & > input
+    display: none
+    & + label
+      display: inline-block
+      cursor: pointer
+      width: 1em
+      font-size: 130%
+      line-height: 1
+      text-align: center
+      &:before
+        content: $unchecked-star
+        color: $unchecked-color
+    &:checked ~ label:before,
+    & + label:hover ~ label:before,
+    & + label:hover:before
+      content: $checked-star
+      color: $checked-color
+  &:hover > input + label:before
+    content: $unchecked-star
+    color: $unchecked-color
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before
+    content: $checked-star
+    color: $checked-color
+
+.catalog.view
+  h2
+    text-transform: uppercase
+    font-size: 21px
+    margin-bottom: 40px
+  hr.m60
+    margin: 60px 0
+  .shadow
+    padding-top: 60px
+    box-shadow: inset 0 30px 55px -37px rgba(0,0,0,0.2)
+    @include responsive($md)
+      box-shadow: inset 0 40px 50px -40px rgba(0,0,0,0.2)
+#variant
+
+  .top-caption
+    margin-top: 0
+    margin-bottom: 30px
+    font-weight: 300
+    @include responsive($md)
+      margin-top: 30px
+    h1
+      display: inline-block
+      font-size: 30px
+      margin-top: 0
+      margin-bottom: 0
+    .pull-right
+      font-size: 16px
+      padding-top: 8px
+      float: none !important
+      @include responsive($sm)
+        float: right !important
+      b
+        margin: 0 5px
+      .rating-stars
+        color: $color_primary
+
+  .marketing-labels
+    border-bottom: 1px solid #e5e5e5
+    margin-top: -17px
+    margin-bottom: 47px
+    .labels
+      background: #fefefe
+      display: block
+      position: relative
+      top: 17px
+      @include responsive-custom(528px)
+        display: inline-block
+    .label
+      display: block
+      background: #fefefe
+      color: #000000
+      font-weight: normal
+      font-size: 12px
+      text-transform: uppercase
+      padding: 10px
+      border-radius: 0
+      border: 1px solid #ccc
+      margin-bottom: 5px
+      @include responsive-custom(528px)
+        display: inline-block
+        margin-right: 10px
+        margin-bottom: 0
+      .fa
+        color: #cdcccd
+        padding-right: 10px
+
+  .information
+    h3
+      color: #282828
+      font-size: 24px
+      margin-bottom: 22px
+    .keys
+      color: #868686
+      font-size: 16px
+      font-weight: 300
+      margin-bottom: 22px
+
+  .add-to-cart-container
+    padding: 0
+    margin-bottom: 30px
+    &>.col-xs-12
+      padding: 0
+      @include responsive($sm)
+        padding: 0 15px
+    @include responsive($sm)
+      margin-bottom: 0
+      padding: 30px 15px
+      box-shadow: 0 2px 30px -5px rgba(0,0,0,.2)
+    input, select
+      width: calc(50% - 15px) !important
+    .size-link
+      float: right
+      position: relative
+      top: -27px
+      a
+        color: #a1a1a1
+        text-decoration: underline !important
+    b.titled
+      font-size: 12px
+      text-transform: uppercase
+      &.titled.cost
+        float: left
+        position: absolute
+        bottom: 10px
+    .row
+      position: relative
+      margin: 0
+      margin-bottom: 20px
+      border-bottom: 1px solid #f2f2f2
+      padding-bottom: 10px
+      .fa
+        font-size: 70%
+        margin-left: 10px
+      .price, .target-price
+        display: block
+        text-align: right
+        font-weight: 300
+      .price
+        color: #9d9d9d
+        font-size: 25px
+      .target-price
+        font-size: 34px
+        line-height: 1
+      .card-discount
+        display: inline-block
+        float: right
+        border-radius: 0
+        font-size: 14px
+        background: #ebebeb
+        margin-bottom: 5px
+        padding: 2px 5px
+
+.zoomWindow
+  height: 585px !important
+
+.variant-tabs
+  padding-top: 60px
+  .nav-tabs
+    border-bottom: none
+    li
+      display: inline-block
+      float: none
+      margin-left: 10px
+      text-transform: uppercase
+      font-size: 14px
+      a
+        color: #3c3c3c
+        border-radius: 0
+        background: #ececec
+      &.active a
+        background: #000
+        color: #fff !important
+        &:before
+          content: ''
+          display: block
+          width: 15px
+          height: 15px
+          background: #000
+          position: absolute
+          bottom: -9px
+          transform: rotate(-38deg) skewY(0deg) skewX(15deg)
+          left: calc(50% - 11px)
+
+.vote-container
+  padding: 20px
+  position: absolute
+  top: 70px
+  .votes,
+  .vote-up,
+  .vote-down
+    margin: 0 auto
+  .votes
+    text-align: center
+    display: block
+    font-size: 18px
+    font-weight: bold
+    margin: 10px 0
+  .vote-up,
+  .vote-down
+    width: 0
+    height: 0
+    cursor: pointer
+    border-left: 15px solid transparent
+    border-right: 15px solid transparent
+  .vote-up
+    border-bottom: 15px solid #ccc
+    &:hover
+      border-bottom: 15px solid $color_primary
+    &.active
+      border-bottom: 15px solid $color_primary
+  .vote-down
+    border-top: 15px solid #ccc
+    &:hover
+      border-top: 15px solid $color_primary
+    &.active
+      border-top: 15px solid $color_primary
+
+i.fa.fa-rub
+  font-size: 75%
+  margin-left: 0.2em
+
+.btn-primary
+  background: $color_primary

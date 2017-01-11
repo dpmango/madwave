@@ -1,0 +1,72 @@
+// Shops (contacts)
+
+$borderColor: #dfdfdf
+$fontColor: #2c2c2c
+$fontGreyColor: rgba(#2c2c2c, .7)
+
+// Helper classes & mixins
+
+@mixin responsive-max($breakpoint)
+  @if $breakpoint == "xs"
+    @media screen and (max-width: 768px)
+      @content
+  @else if $breakpoint == "sm"
+    @media screen and (max-width: 991px)
+      @content
+  @else if $breakpoint == "md"
+    @media screen and (max-width: 1200px)
+      @content
+
+html
+  overflow-y:scroll
+
+.mt20
+  margin-top: 22px
+.mt30
+  margin-top: 28px
+
+.no-pad-l
+  padding-left: 0
+  @include responsive-max($xs)
+    padding-left: 15px
+.no-pad-r
+  padding-right: 0
+  @include responsive-max($xs)
+    padding-right: 15px
+
+.fl-r
+  float: right
+
+.form-group
+  &--bold-label
+    label
+      display: block
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 500
+
+.form-control
+  &--short
+    display: inline-block
+    width: 80px
+  &--search
+    background: url('http://localhost:3000/images/ico-search.png') no-repeat 95% center
+
+
+.btn
+  &-outline
+    border: 1px solid $fontColor
+    color: $fontColor
+    font-size: 12px
+    text-transform: uppercase
+    border-radius: 0
+    padding: 8px 30px 6px 30px
+  &-block
+    display: block
+  &-pad
+    margin-top: 10px
+    padding-left: 30px
+    padding-right: 30px
+
+.t_primary
+  color: $color_primary !important

@@ -1,0 +1,73 @@
+doctype html
+html(lang="ru-RU")
+  include shared/head.pug
+
+  body.catalog.view
+    // TEMP
+    <script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+    // shitty codding ??
+    #wr1ap.bonus-wrap
+      include shared/header.pug
+      .page-buffer
+      .breadcrumbs_container
+        .container
+          ul.breadcrumb
+            li
+              a(href='/') Главная
+            li.active
+              a(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya') Скидочная карта
+      .bonus
+        .container
+          .row.flex
+            .col-sm-8.col-md-6
+              .bonus-title Выгода ДО 60%
+              .bonus-subtitle с первой покупки
+              .bonus-desc Стратегия предоставления скидок и бонусов одновременно стабилизирует поведенческий таргетинг. Более того, имидж предприятия упорядочивает conversion rate.
+              .visible-xs.text-center.mt20
+                img.img-responsive(src="http://localhost:3000/images/bonus-card-mobile.png")
+              .bonus-cards
+                .row
+                  .col-sm-6
+                    a.bonus-card(href="#")
+                      img.img-responsive(src="http://localhost:3000/images/bonus-goods.png")
+                      .bonus-card-content
+                        .bonus-card-title cult
+                        .bonus-card-desc Мужские плавки антихлор
+                        .bonus-card-price
+                          .bonus-card-old 590 <i class="fa fa-rub"></i>
+                          .bonus-card-new <i class="fa fa-credit-card"></i> 1590 <i class="fa fa-rub"></i>
+                        .bonus-card-tag
+                          span 60%
+                  .col-sm-6
+                    a.bonus-card(href="#")
+                      img.img-responsive(src="http://localhost:3000/images/bonus-goods.png")
+                      .bonus-card-content
+                        .bonus-card-title cult
+                        .bonus-card-desc Мужские плавки антихлор
+                        .bonus-card-price
+                          .bonus-card-old 590 <i class="fa fa-rub"></i>
+                          .bonus-card-new <i class="fa fa-credit-card"></i> 1590 <i class="fa fa-rub"></i>
+                        .bonus-card-tag
+                          span 60%
+              form.bonus-form(action="")
+                .row
+                  .col-sm-12
+                    .bonus-form-title Зарегистрируйтесь и получите <br> скидочную карту
+                  .col-sm-6
+                    .form-group
+                      label ВАШЕ ИМЯ
+                      input.form-control.rad0(type="text" placeholder="Как вас зовут")
+                    .form-group
+                      label ВАШ EMAIL
+                      input.form-control.rad0(type="email" placeholder="Ваш электронный адрес")
+                    button.btn.btn-lg.btn-danger.btn-pad(type="submit") Получить карту
+                    .bonus-form-small Мы пришлем логин и пароль <br> на ваш почтовый адрес
+                  .col-sm-5
+                    .bonus-form-strategy Стратегия предоставления скидок <br> и бонусов одновременно стабилизирует поведенческий таргетинг. Более того, имидж предприятия упорядочивает conversion rate.
+                    a.btn.btn-lg.btn-primary.btn-block(href="#") У меня уже есть карта
+
+            .col-sm-4.col-md-6.hidden-xs
+              .bonus-model
+                img.img-responsive(src="http://localhost:3000/images/bonus-model.png")
+
+    include shared/footer.pug

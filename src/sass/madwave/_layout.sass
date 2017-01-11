@@ -1,0 +1,957 @@
+@charset "UTF-8"
+
+.has-success
+  .form-control
+    border-color: $color_primary
+    &:focus
+      border-color: $color_primary
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px $color_primary
+      box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px $color_primary
+
+.has-error
+  .control-label
+    color: #fd3a3a
+  .form-control
+    padding-right: 32px
+    border-color: #fd3a3a
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label
+  color: #fd3a3a
+
+input[type="checkbox"].custom
+  display: none
+  & + i
+    width: 17px
+    height: 17px
+    border: 1px solid #c6c6c6
+    display: inline-block
+    margin-right: 9px
+    margin-left: -20px
+    position: relative
+    top: 3px
+    border-radius: 3px
+    .fa
+      display: none
+      position: absolute
+      left: 3px
+      top: 2px
+      color: #c6c6c6
+      font-size: 10px
+  &:checked + i
+    .fa
+      display: inline-block
+
+
+#wrap
+  min-height: 100%
+  height: auto
+  margin: 0 auto -556px
+  padding: 0 0 582px
+  overflow: hidden
+
+  @include responsive($sm)
+    margin: 0 auto -437px
+    padding: 0 0 477px
+
+  @include responsive($md)
+    margin: 0 auto -359px
+    padding: 0 0 430px
+
+  & > .breadcrumbs_container
+    padding: 25px 0
+    background: #f3f3f3
+
+  &  > .container
+    @include responsive($xs)
+      padding-right: 15px
+      padding-left: 15px
+      margin-right: auto
+      margin-left: auto
+
+  .breadcrumb
+    background: transparent
+    margin-bottom: 0
+    font-size: 16px
+    font-weight: 300
+    padding: 0
+    & > .active
+      color: #3c3c3c
+    a
+      color: #949494
+      &:hover
+        color: #3c3c3c
+        text-decoration: none
+    & > li + li:before
+      content: ""
+      margin: 0 10px 0 5px
+      background: url(../images/icons/marker-breadcrumb.png) left center/contain no-repeat
+      font-size: 8px
+      transform: rotate(180deg)
+      display: inline-block
+      width: 10px
+      height: 10px
+      position: relative
+      top: 0
+      @include responsive($sm)
+        transform: rotate(0deg)
+        margin: 0 5px 0 10px
+    li
+      display: none
+      &:nth-last-child(2)
+        display: inline-block
+      @include responsive($sm)
+        display: inline-block
+
+.caret.custom
+  display: inline-block
+  width: 7px
+  height: 7px
+  vertical-align: middle
+  border: none
+  border-right: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+  transform: rotate(45deg)
+  margin-top: -6px
+  margin-left: 10px
+
+.pointer
+  cursor: pointer
+.city
+  color: #67b0cd
+  text-transform: uppercase
+  font-weight: 500
+
+#sub-header
+  height: 0
+  overflow: hidden
+  @include responsive($md)
+    height: 45px
+    padding: 15px
+    font-size: 12px
+    overflow: inherit
+  .right-side
+    float: right
+    text-align: right
+    a
+      color: $color_link
+      text-decoration: underline
+    .pipe
+      padding: 0 10px
+      color: $color_gray_light
+    .sosocial
+      &, & a
+        color: $color_gray
+      a
+        display: inline-block
+        text-decoration: none
+      a, span
+        margin-right: 15px
+
+.field-subscribe-email
+  margin-bottom: 0
+
+#header
+  position: fixed
+  z-index: 3
+  top: 0
+  height: 57px
+  width: 100%
+  background: $color_black
+  transition: .2s
+  font-weight: 500
+  &.nav-up
+    margin-top: -75px
+
+
+  @include responsive($md)
+    margin-top: 0 !important
+    position: relative
+    height: 75px
+
+  .logo
+    width: 116px
+    margin-top: 8px
+    position: absolute
+    left: calc(50% - 58px)
+    height: 35px
+    background: url("../images/logo-white.svg") center center / contain no-repeat
+    @include responsive($md)
+      position: inherit
+      float: left
+      margin-top: 20px
+      display: block
+      width: 140px
+      margin-right: 56px
+
+
+  .nav-right i
+    padding: 8px 9px
+    color: #8d8d8d
+    font-size: 16px
+    @include responsive($md)
+      padding: 10px 15px
+      color: #8d8d8d
+      font-size: 13px
+    &:hover
+      color: #fff
+
+
+  .nav-right
+    padding: 12px 0
+    padding-right: 40px
+    @include responsive($md)
+      position: relative
+      padding: 20px 0
+      padding-right: 50px
+    & > div
+      display: inline-block
+    .pipe
+      color: #585858
+    .fa-shopping-bag
+      position: relative
+      &.has-items
+        padding-right: 0
+        @include responsive($md)
+          padding-right: 30px
+      .cc
+        font-family: inherit
+        display: block
+        position: absolute
+        right: 10px
+        top: 3px
+        color: #fff
+        background: #00b0cc
+        width: 14px
+        height: 14px
+        text-align: center
+        border-radius: 100%
+        font-size: 9px
+        line-height: 14px
+
+
+  .cart
+    display: block
+    height: 75px
+    width: 62px
+    background: url("../images/icon-cart.png") center center no-repeat
+    background-size: 65%
+    @include responsive($sm)
+      position: absolute
+      right: 0
+    @include responsive($md)
+      position: relative
+      background: url("../images/sprite-action_icons.png") -28px 10px no-repeat
+    &:hover, &:focus, &:active
+      cursor: pointer
+      text-decoration: none
+    span
+      display: block
+      width: 23px
+      height: 23px
+      margin-top: 13px
+      border-radius: 100%
+      color: #fff
+      text-align: center
+      background: #dd2e2e
+      font-size: 14px
+      padding-right: 1px
+      padding-top: 2px
+      @include responsive($md)
+        width: 15px
+        height: 15px
+        margin-top: 5px
+        font-size: 10px
+        padding-right: 1px
+        padding-top: 1px
+
+  .cart, .search
+    position: relative
+    @include responsive($md)
+      width: 35px
+      height: 35px
+      margin-left: 10px
+      margin-top: 18px
+
+    @include responsive($md)
+  .user
+    width: auto
+    color: #fff
+    font-weight: bold
+    span
+      margin-top: 0
+      margin-right: 10px
+
+  .search
+    display: block
+    color: #bebebe
+    @include responsive($md)
+      position: relative
+      margin-top: 19px
+      right: 0
+    &:hover,
+    &:focus,
+    &:active
+      color: $color_primary
+
+    .search-submit
+      cursor: pointer
+
+    #search input
+
+
+      &:hover,
+      &:focus,
+      &:active
+        outline: none
+    #search input.focus,
+    #search input:focus
+      width: 200px
+      //padding-right: 35px
+      //padding-left: 10px
+      border-bottom: 1px solid #00b0cc !important
+
+
+#search
+  height: 100%
+  width: 48px
+  position: absolute
+  background: #000
+  top: 0
+  right: 0
+  padding-top: 12px
+  transition: .3s
+  overflow: hidden
+  @include responsive($md)
+    padding-top: 20px
+    padding-right: 0
+    right: 0
+  &.active
+    width: 100%
+    @include responsive($md)
+      width: 200px
+
+    form
+      width: calc(100% - 65px)
+      position: absolute
+      left: 45px
+      input
+        display: block
+        width: calc(100% - 10px)
+
+    .fa-search
+      padding-left: 20px
+      float: left
+
+  form
+    float: left
+    width: 0
+
+  input
+    border: none
+    transition: 0.5s
+    background: #000
+    height: 30px
+    width: 0
+    display: none
+    border-bottom: 1px solid $color_primary
+    &:focus
+      outline: none
+      color: $color_primary
+
+
+#nav
+  .humburger
+    width: 55px
+    height: 55px
+    float: left
+    margin-left: -15px
+    text-decoration: none
+    font-size: 17px
+    color: #8d8d8d
+    > .fa
+      padding: 20px
+      cursor: pointer
+    &:hover
+      color: #fff
+      position: relative
+    @include responsive($md)
+      width: auto
+      height: auto
+      margin-left: 0
+      padding: 30px 0
+      font-size: 13px
+      color: #fff
+      &:hover
+        & > #catalog
+          display: block
+      & > span:first-child
+        text-transform: uppercase
+        margin-right: 25px
+        cursor: default
+        .fa
+          display: inline-block
+          margin-left: 10px
+          font-size: 9px
+          position: relative
+          top: -1px
+      .fa
+        display: none
+
+
+#catalog,
+#navigation
+  width: 100%
+  background: #000
+  list-style: none
+  z-index: 99
+  position: fixed
+  height: 100%
+  left: -100%
+  overflow: auto
+  top: 0
+  transition: .6s
+  padding-left: 0
+  padding-bottom: 65px
+  .right-arrow,
+  .close-nav,
+  .close-catalog
+    position: relative
+    z-index: 2
+    width: 16px
+    height: 16px
+    cursor: pointer
+
+  .right-arrow
+    left: 0
+    float: right
+    margin-top: 5px
+    background: url('../images/icons/right-arrow.svg') center center/100% no-repeat
+
+  .close-catalog
+    float: left
+    background: url('../images/icons/close-catalog.svg') center center / 30% no-repeat
+
+
+  .closer
+    text-align: right
+    padding: 0
+    .close-nav
+      float: right
+      background: url('../images/icons/closer.svg') center center / 30% no-repeat
+    @include responsive($md)
+      display: none
+  a, .a
+    color: #fff
+    padding: 20px 0
+    display: inline-block
+    text-decoration: none
+    width: 100%
+    font-size: 18px
+    font-weight: 300
+    border-top: 1px solid #333
+    @include responsive($md)
+      margin-right: 25px
+      padding: 30px 0
+      height: 75px
+    &:hover, &:focus, &:active
+      cursor: pointer
+      text-decoration: none
+    & > sup
+      color: $color_primary
+      font-size: 70%
+  .fa
+    margin-right: 15px
+  ul
+    padding: 0
+  li
+    position: relative
+    list-style: none
+    padding: 0 40px
+  &.opened
+    left: 0
+  &.pushed
+    left: 100%
+
+
+  .childs
+    li
+      padding-left: 25px !important
+    a
+      font-size: 16px !important
+      border-top: 1px solid #333 !important
+  .close-catalog,
+  .close-nav
+    width: 68px !important
+    height: 68px !important
+    padding: 26px
+
+  li:nth-child(2) a,
+  li:nth-child(2) .a,
+  li:not(.small) + li.small a,
+  li:not(.small) + li.small .a
+    border-top: transparent
+  li:not(.small) + li.small
+    margin-top: 40px
+    @include responsive($md)
+      margin-top: 0
+
+  li.small
+    a
+      font-size: 16px !important
+      @include responsive($md)
+        font-size: 13px !important
+
+  @include responsive($md)
+    display: block
+    background: transparent
+    padding-bottom: 0
+    margin-bottom: 0
+    float: left
+    width: auto
+    overflow: visible
+    position: inherit
+    li
+      float: left
+      padding: 0
+      a, .a
+        font-size: 13px
+        margin-right: 25px
+        display: inline-block
+        height: 75px
+        text-transform: uppercase
+        font-weight: 500
+
+  .item-slide
+    position: absolute
+    right: 0
+    top: 0
+    padding: 20px
+    color: #ccc
+    cursor: pointer
+    @include responsive($md)
+      display: none
+
+
+#catalog
+  @include responsive($md)
+    display: none
+    position: absolute
+    top: 75px
+    left: 0
+    li
+      background: #0c0c0c
+      width: 270px
+      padding: 0
+      a
+        font-weight: normal
+        padding: 20px
+        margin: 0
+        height: auto
+        border-top: 1px solid #2f2f2f
+        line-height: 1 !important
+        color: #7a7a7a
+        &:hover, &:focus, &:active
+          color: #fff
+          background: #131313
+
+    li:hover .childs
+      display: block
+      position: absolute
+      left: 250px
+      z-index: 1
+      top: -9px
+      box-shadow: -20px 3px 50px -7px rgba(0,0,0,0.7)
+      background: #0c0c0c
+      li
+        background: #0c0c0c
+        width: 270px
+        padding: 0 !important
+        &:first-child a
+          padding-top: 30px
+          border-top: transparent !important
+        &:last-child a
+          padding-bottom: 30px
+      a
+        font-size: 13px !important
+
+#subscribe
+  background: url("../images/layout/subscribe-bg.jpg") center center / cover no-repeat
+  color: #fff
+  font-size: 18px
+  font-weight: bold
+  text-align: center
+  text-transform: uppercase
+  line-height: 2
+  padding: 20px 0
+  @include responsive($md)
+    padding: 47px
+
+  form
+    display: inline-block
+    font-weight: normal
+    font-size: 12px
+    .form-group
+      float: left
+      @include responsive($md)
+        margin-left: 20px
+    .help-block
+      font-size: 10px
+      height: 55px
+      margin-bottom: -55px
+      width: 180px
+    input[type=text]
+      border: none
+      height: 40px
+      padding: 15px 10px
+      float: left
+      color: #333
+      text-transform: uppercase
+      @include responsive($md)
+        padding: 15px 20px
+
+    input[type=submit]
+      border: none
+      height: 40px
+      padding: 5px 10px
+      background: #fd3a3a
+      text-transform: uppercase
+      @include responsive($md)
+        padding: 5px 20px
+
+
+#contact-map
+  position: relative
+  overflow: hidden
+  min-height: 371px
+  padding: 0
+  @include responsive($md)
+    padding: 112px 0
+  .show-on-map
+    cursor: pointer
+  #contact_metro
+    display: inline-block
+  .cont
+    height: 371px
+    width: 100%
+    position: relative
+    transition: .5s
+    z-index: 2
+    background: #fff
+    top: 0
+    margin: 0 auto
+    max-width: 460px
+    box-shadow: 0 2px 50px 0 rgba(0,0,0,.3)
+    &.slide-down
+      top: 320px
+      @include responsive($md)
+        top: 430px
+      &:before
+        content: "Показать контакты"
+        display: block
+        text-align: center
+        padding: 15px
+    .face
+      padding: 35px
+
+      select
+        border-radius: 10px
+        border-color: #ededed
+        text-transform: uppercase
+        padding: 5px 10px
+        font-size: 11px
+        outline: none !important
+      h4
+        font-size: 22px
+        text-transform: uppercase
+        margin-top: 30px
+        margin-bottom: 20px
+      p
+        color: #939393
+        font-size: 16px
+        font-weight: 300
+        line-height: 1
+
+      #contact_metro select
+        margin-left: 10px
+    .mail
+      left: 33.33333%
+      border-left: 1px solid #ededed
+      border-right: 1px solid #ededed
+    .consult
+      right: 0
+    .phone,.mail,.consult
+      position: absolute
+      bottom: 0
+      width: 33.33333%
+      text-align: center
+      padding: 20px 10px
+      border-top: 1px solid #ededed
+      text-transform: uppercase
+      font-size: 10px
+      @include responsive($md)
+        padding: 20px
+
+      i
+        display: block
+        color: #ccc
+        margin-bottom: 10px
+        font-size: 26px
+
+
+
+
+#vmap-wrapper
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 1
+  #map
+    height: 100%
+    width: 100%
+
+.maestro
+  background: url("../images/icons/payment/maestro.svg") center center / contain no-repeat
+.paypal
+  background: url("../images/icons/payment/paypal.svg") center center / contain no-repeat
+.mastercard
+  background: url("../images/icons/payment/master_card.svg") center center / contain no-repeat
+.visa
+  background: url("../images/icons/payment/visa.svg") center center / contain no-repeat
+
+#footer
+  background: #000
+  padding: 60px 0 40px 0
+  .paysystems
+    i
+      width: 25%
+      height: 30px
+      display: block
+      float: left
+
+
+  .footer-links
+    margin-top: 20px
+    @include responsive($md)
+      margin-top: 0
+
+  .contact
+    color: #fff
+    font-size: 14px
+    font-weight: 300
+    span
+      color: #00b0ce
+      font-weight: bold
+  a
+    color: #808080
+    text-decoration: underline
+    margin-right: 20px
+    text-transform: uppercase
+    font-size: 12px
+    display: inline-block
+    &:hover
+      color: #fff
+
+
+#sub-footer
+  background: #151515
+  padding: 20px 0
+  font-size: 13px
+  color: #b9b9b9
+  line-height: 3
+
+  a
+    color: #b9b9b9
+    text-decoration: underline
+    margin-right: 15px
+
+  .logo
+    height: 39px
+    width: 175px
+    background: url("../images/logo-white.svg") center center / contain no-repeat
+    margin: 0 auto
+    @include responsive($md)
+      margin: 0
+  .goHome
+    cursor: pointer
+    margin: 0 auto
+    float: none !important
+    border-bottom: 1px dotted
+    line-height: 1.5
+    margin-top: 10px
+    &:hover
+      color: #fff
+    @include responsive($sm)
+      float: right !important
+
+
+.autocomplete-suggestions
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  border: 1px solid #999
+  background: #FFF
+  cursor: default
+  overflow: auto
+  -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64)
+  -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64)
+  box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64)
+
+.autocomplete-suggestion
+  padding: 2px 5px
+  white-space: nowrap
+  overflow: hidden
+
+.autocomplete-no-suggestion
+  padding: 2px 5px
+
+.autocomplete-selected
+  background: #F0F0F0
+
+.autocomplete-suggestions strong
+  font-weight: bold
+  color: #000
+
+.autocomplete-group
+  padding: 2px 5px
+  strong
+    font-weight: bold
+    font-size: 16px
+    color: #000
+    display: block
+    border-bottom: 1px solid #000
+
+.inline-block
+  display: inline-block
+
+.swipe-wrap
+  position: relative
+  overflow-x: auto
+  width: 100%
+  height: 100%
+  z-index: 1
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  -webkit-transition-property: -webkit-transform
+  -moz-transition-property: -moz-transform
+  -o-transition-property: -o-transform
+  -ms-transition-property: -ms-transform
+  transition-property: transform
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+.modal-content
+  border-radius: 0
+
+.zigzag:after
+  content: ""
+  display: block
+  width: 38px
+  height: 5px
+  background: url(../images/layout/zig.png) center center no-repeat
+  margin: 15px 0
+
+.aside-widget
+  padding: 40px 35px
+  border: 1px solid #dadada
+  margin-bottom: 30px
+  h4
+    font-weight: bold
+    font-size: 14px
+    text-transform: uppercase
+  p, a
+    font-size: 14px
+    color: #7f7f7f
+  a
+    display: inline-block
+    text-decoration: underline
+    margin-right: 15px
+    &:hover
+      color: $color_primary
+
+.pager-trigger
+  display: block
+  margin-top: 30px
+  width: 100%
+  text-align: center
+  border: 1px solid #dcdcdc
+  padding: 15px
+  font-size: 12px
+  line-height: 1
+  text-transform: uppercase
+  cursor: pointer
+  position: relative
+  background: #fff
+  &.pager-trigger--primary
+    background: #00b0cc
+    color: #fff
+    font-size: 16px
+    font-weight: 500
+    padding: 25px
+    border-color: transparent
+
+#signup-popup
+  label
+    font-size: 10px
+    font-weight: bold
+    text-transform: uppercase
+
+  .modal-header,
+  .modal-body
+    padding: 30px
+
+  .modal-body
+    padding-top: 0
+
+  .modal-header
+    padding-bottom: 0
+    border-bottom: none
+    h2
+      margin-top: 0
+      font-size: 24px
+      font-weight: 500
+      text-transform: uppercase
+
+  .auth-clients
+    display: inline-block
+
+.btn
+  text-transform: uppercase
+  font-weight: 500
+  font-size: 12px
+  padding: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

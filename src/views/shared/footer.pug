@@ -1,0 +1,116 @@
+section#subscribe
+  .container.p0
+    | Подписаться на новости
+    form#w1(action='/site/mail-scribe', method='post')
+      input(type='hidden', name='_csrf', value='R3RxSjBpSjcePzNzCSUvdH4dHgNZP3hYBkxADQQlBWETMCEsc1EtYQ==')
+      .form-group.field-subscribe-email.required
+        input#subscribe-email(type='text', name='Subscribe[email]', placeholder='Ваш e-mail')
+        .help-block
+      input(type='submit', value='Подписаться')
+section#footer
+  .container.p0
+    .col-md-3.hidden-xs.hidden-sm
+      .paysystems
+        i.maestro
+        i.paypal
+        i.mastercard
+        i.visa
+    .col-md-4.contact.p0.text-center-xs
+      | Бесплатный звонок по РФ
+      span 8 800 100 57 19
+      br
+      |                 Ежедневно, с 09:00 до 20:00 МСК
+    .col-md-5.p0.footer-links.text-center-xs
+      a(href='/about/franchise') Франчайзинг
+      a(href='/about/info/contacts') Контакты
+      a(href='/about/info-panel/discount-offers') Экономия до 40%
+      a(href='/about/info/returns-exchange') Возврат и обмен
+      a(href='/about/info/sizes') Размерная сеткdа
+section#sub-footer
+  .sub
+    .container.p0
+      .col-md-3
+        .logo
+      .col-md-9.text-center-xs
+        a(href='#') Все права зщищены
+        br.visible-xs
+        span
+          span.hidden-xs Адрес:
+          |  Санкт-Петербург, Индустриальный Проспект, 70
+        .goHome.pull-right В начало
+script.
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85538552-1', 'auto');
+  ga('require', 'ec');
+script(src='/assets/3fdcd303/jquery.min.js')
+script(src='/assets/eff483b6/yii.js')
+script(src='/js/jquery.elevateZoom.min.js')
+script(src='/js/product_view.min.js')
+script(src='/js/autocomplete/dist/jquery.autocomplete.min.js')
+script(src='/js/slick/slick.min.js')
+script(src='/js/theia-sticky-sidebar.min.js')
+script(src='/js/bootstrap/custom.min.js')
+script(src='/assets/eff483b6/yii.validation.js')
+script(src='/assets/eff483b6/yii.activeForm.js')
+// add main.js
+script(type="text/javascript" src="http://localhost:3000/js/main.js")
+script(type='text/javascript').
+  jQuery(document).ready(function () {
+  ga('ec:addProduct', {"id":"M0727 01","name":"CORE ALIGNMENT","category":"Калабашка","brand":"Mad Wave","variant":"M0727 01 0 00W"}); ga('ec:setAction', 'detail');
+  ga('ec:addImpression', {"id":"M1431 02","name":"Jammer PBT","category":"Мужские джаммеры антихлор","brand":"Mad Wave","variant":"M1431 02 5 01W","list":"C этим товаром покупают"})
+  ga('ec:addImpression', {"id":"M0741 01","name":"Positive Drive","category":"Ласты для брасса","brand":"Mad Wave","variant":"M0741 01 4 00W","list":"C этим товаром покупают","position":1})
+  ga('ec:addImpression', {"id":"M0320 03","name":"Admiral","category":"Мужские тапки","brand":"Mad Wave","variant":"M0320 03 8 01W","list":"C этим товаром покупают","position":2})
+  ga('ec:addImpression', {"id":"M0746 07","name":"FREESTYLE","category":"Лопатки","brand":"Mad Wave","variant":"M0746 07 0 01W","list":"C этим товаром покупают","position":3})
+  $('body')
+  .on('click', '#city-picker', function() {
+  if (!$('.pac-container').length) {
+  placesAutocomplete();
+  }
+  })
+  .on('click', '.call-city-picker', function() {
+  $('#navigation')
+  .removeClass('pushed')
+  .removeClass('opened');
+  $('#city-picker').modal('show');
+  })
+  .on('click', '.set-city', function() {
+  $('.set-city').removeClass('active');
+  $(this).addClass('active');
+  setLocation($(this).data('city'));
+  })
+  ;
+  function setLocation(input) {
+  $.ajax({
+  type: "POST",
+  url:  '/citydetector/ajax/set-location',
+  data: {input: input},
+  success: function(response){
+  $('.location-city')
+  .text(response)
+  .val(response);
+  $('#city-picker').modal('hide');
+  location.reload();
+  },
+  error: function(error){console.log(error)}
+  });
+  }
+  function placesAutocomplete() {
+  var input = document.getElementById('city-picker-input');
+  var options = {
+  types: ['(cities)'],
+  componentRestrictions: {country: 'ru'}
+  };
+  autocomplete = new google.maps.places.Autocomplete(input, options);
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+  $('.set-city').removeClass('active');
+  setLocation($('#city-picker-input').val());
+  });
+  }
+  jQuery('#w1').yiiActiveForm([{"id":"subscribe-email","name":"email","container":".field-subscribe-email","input":"#subscribe-email","validate":function (attribute, value, messages, deferred, $form) {yii.validation.required(value, messages, {"message":"Необходимо заполнить «Email»."});yii.validation.email(value, messages, {"pattern":/^[a-zA-Z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/,"fullPattern":/^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/,"allowName":false,"message":"Значение «Email» не является правильным email адресом.","enableIDN":false,"skipOnEmpty":1});}}], []);
+  });
+script(src='/js/custom.min.js')
+script.
+  ga('send', 'pageview');

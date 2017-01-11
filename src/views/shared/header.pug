@@ -1,0 +1,379 @@
+#sub-header
+  .container
+    .pull-left.pointer.call-city-picker(data-target='#city-picker')
+      i.map-marker
+      span.city.location-city Москва
+      .caret.custom
+    #city-picker.modal.fade(tabindex='0', role='dialog')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+            h2
+              | Выбор города
+              br
+              small
+                | Всего
+                span 1204
+                |  города
+          .modal-body
+            label(for='city-picker-input') выберите или введите название вашего города
+            input#city-picker-input.form-control.location-city(type='text', value='Москва')
+            hr
+            .row
+              .col-md-4
+                ul
+                  li
+                    span.set-city.active(data-city='Москва')
+                      | Москва
+                  li
+                    span.set-city(data-city='Санкт-Петербург')
+                      | Санкт-Петербург
+                  li
+                    span.set-city(data-city='Архангельск')
+                      | Архангельск
+                  li
+                    span.set-city(data-city='Владивосток')
+                      | Владивосток
+                  li
+                    span.set-city(data-city='Волгоград')
+                      | Волгоград
+                  li
+                    span.set-city(data-city='Воронеж')
+                      | Воронеж
+                  li
+                    span.set-city(data-city='Екатеренбург')
+                      | Екатеренбург
+                  li
+                    span.set-city(data-city='Ижевск')
+                      | Ижевск
+                  li
+                    span.set-city(data-city='Иркутск')
+                      | Иркутск
+                  li
+                    span.set-city(data-city='Казань')
+                      | Казань
+                  li
+                    span.set-city(data-city='Кеиерово')
+                      | Кеиерово
+                  li
+                    span.set-city(data-city='Краснодар')
+                      | Краснодар
+              .col-md-4
+                ul
+                  li
+                    span.set-city(data-city='Красноярск')
+                      | Красноярск
+                  li
+                    span.set-city(data-city='Мурманск')
+                      | Мурманск
+                  li
+                    span.set-city(data-city='Набережные челны')
+                      | Набережные челны
+                  li
+                    span.set-city(data-city='Нижний Новгород')
+                      | Нижний Новгород
+                  li
+                    span.set-city(data-city='Новосибирск')
+                      | Новосибирск
+                  li
+                    span.set-city(data-city='Омск')
+                      | Омск
+                  li
+                    span.set-city(data-city='Перьм')
+                      | Перьм
+                  li
+                    span.set-city(data-city='Ростов-на-Дону')
+                      | Ростов-на-Дону
+                  li
+                    span.set-city(data-city='Саратов')
+                      | Саратов
+                  li
+                    span.set-city(data-city='Самара')
+                      | Самара
+                  li
+                    span.set-city(data-city='Сургут')
+                      | Сургут
+                  li
+                    span.set-city(data-city='Тверь')
+                      | Тверь
+              .col-md-4
+                ul
+                  li
+                    span.set-city(data-city='Тольятти')
+                      | Тольятти
+                  li
+                    span.set-city(data-city='Тула')
+                      | Тула
+                  li
+                    span.set-city(data-city='Тюмень')
+                      | Тюмень
+                  li
+                    span.set-city(data-city='Ульяновск')
+                      | Ульяновск
+                  li
+                    span.set-city(data-city='Уфа')
+                      | Уфа
+                  li
+                    span.set-city(data-city='Хабаровск')
+                      | Хабаровск
+                  li
+                    span.set-city(data-city='Челябинск')
+                      | Челябинск
+                  li
+                    span.set-city(data-city='Ярославль')
+                      | Ярославль
+    .right-side
+      a(href='#') ГАРАНТИРОВАННЫЕ ПОДАРКИ НА СУММУ ОТ 5000 РУБЛЕЙ!
+      span.pipe |
+      |                 ПОДРОБНЕЕ 8 800 100 57 19
+      span.pipe |
+      span.sosocial
+        span ПОДПИСЫВАЙСЯ
+        a.fa.fa-facebook(href='https://www.facebook.com/madwavemax')
+        a.fa.fa-twitter(href='https://twitter.com/madwave')
+        a.fa.fa-youtube(href='https://www.youtube.com/c/madwaverus')
+        a.fa.fa-vk(href='https://vk.com/madwaverus')
+        a.fa.fa-google-plus(href='https://plus.google.com/+MadWaveRus')
+header#header
+  .container
+    a.logo(href='/')
+    nav#nav
+      .humburger
+        span.hidden-xs.hidden-sm
+          | Каталог
+          i.fa.fa-chevron-right
+        i.fa.fa-bars
+        ul#catalog
+          li.closer
+            .close-catalog
+            .close-nav
+          li
+            a.item.hidden-xs.hidden-sm.color-red(href='http://yii2.madwave.ru/stock')
+              i.fa.fa-tag
+              | Спецпредложения
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/gidrokostjumy-dlya-plavaniya') Стартовые костюмы
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/gidrokostyumy-fina/zhenskiy-startovyy-kostyum') Женские гидрокостюмы
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/gidrokostyumy-fina/muzhskoy-startovyy-kostyum') Мужские гидрокостюмы
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/aksessuary/ochki-dlya-plavaniya') Очки для плавания
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/startovye-ochki') Стартовые очки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya') Тренировочные очки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-yuniorskie') Юниорские очки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-detskie') Детские очки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/ochki-dlya-plavaniya-s-dioptriyami') Очки с диоптриями
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/maski-dlya-plavaniya') Маски для плавания
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/aksessuary-dlya-ochkov') Аксессуары для очков
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/ochki/aksessuary-dlya-ochkov/sprey-protiv-zapotevaniya') Антифог
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya') Шапочки для плавания
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/rezinovaya-shapochka') Резиновые шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/silikonovaya-shapochka') Силиконовые шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/lateksnaya-shapochka') Латексные шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/tekstilnaya-shapochka') Текстильные шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/shapochki-dlya-plavaniya-2') Комбинированные шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/yuniorskaya-pu-shapochka') Детские шапочки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/aksessuary/shapochki-dlya-plavaniya/shapochka-dlya-dusha') Шапочки для душа
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya') Инвентарь для плавания
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/trenazhery-dlya-plavaniya') Тренажеры
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/lasty') Ласты для плавания
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/lopatki') Лопатки для плавания
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki') Доски и калабашки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/berushi-nosovye-zazhimy-antifogi') Беруши, носовые зажимы
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/polotenca') Полотенца
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/sumki') Рюкзаки и сумки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/elektronnye-ustroystva') Электронные устройства
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/noski') Носки для бассейна
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie') Женские купальники
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/zhenskiy-kupalnik-sportivnyy-19') Спортивные купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/zhenskiy-kupalnik-sportivnyy-20') Купальники антихлор
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskiy-kupalnik-modeliruyushchiy') Моделирующие купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/detskie-sportivnye-kupalniki-i-plavki/detskiy-kupalnik-12') Юниорские купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/detskie-sportivnye-kupalniki-i-plavki') Детские купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/tormoznye-shorty-zhenskie') Тормозные шорты
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-plyazh/zhenskiy-plyazhnyy-tekstil') Пляжные купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-plyazh/detskiy-plyazhnyy-tekstil/kupalnik-plyazhnyy-detskiy') Детские пляжные купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnoe-plavanie/zhenskie-kupalniki-sportivnye/kupalnik-dlya-beremennyh') Купальник для беременных
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki') Мужские плавки и шорты
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-plavki') Плавки мужские
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-plavki-antihlor') Плавки антихлор
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-dzhammery') Джаммеры
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/detskie-plavki') Плавки для мальчиков
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki-2') Плавки-шорты
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/shorty-plavatelnye') Шорты плавательные
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/detskie-plavki-shorty') Плавки-шорты детские
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/plavki-sportivnye-yuniorskie') Юниорские плавки и шорты
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/obuv') Обувь для плавания
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/obuv/detskie-tapochki') Детская обувь
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/obuv-0') Женская обувь
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/obuv/muzhskie-tapki') Мужская обувь
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu') Обучение плаванию
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/zhilet-naduvnoy') Жилет надувной
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/igrushka') Игрушки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/krug') Круги надувные
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/matras') Матрасы
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/myach') Мячи
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/dlya-obucheniya-plavaniyu/narukavniki') Нарукавники
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/vodnoe-polo') Водное поло
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/vodnoe-polo/inventar-dlya-vodnogo-polo') Инвентарь
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/vodnoe-polo/kupalnik-dlya-vodnogo-polo-antihlor') Купальники
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/vodnoe-polo/plavki-dlya-vodnogo-polo-antihlor') Плавки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/vodnoe-polo/shapochki-dlya-vodnogo-polo') Шапочки
+          li
+            a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/akvafitnes') Аквафитнес
+          li
+            a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-fitnesa') Фитнес инвентарь
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/snorkelling') Сноркелинг и дайвинг
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/snorkelling/lasty') Ласты
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/snorkelling/maska') Макси
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/snorkelling/trubka') Трубки
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/plyazhnye-shorty') Пляжные шорты
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/plyazhnye-shorty/shorty-muzhskie') Мужские шорты
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/plyazhnye-shorty/shorty-zhenskie') Женские шорты
+          li
+            a.item.open-childs(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda') Спортивная одежда
+            ul.childs.slide-content
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/futbolka') Футболки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/muzhskoy-sportivnyy-zhaket') Мужские куртки и толстовки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/muzhskie-sportivnye-bryuki') Мужские спортивные брюки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/zhenskie-sportivnye-bryuki') Женские спортивные брюки
+              li
+                a.item(href='http://yii2.madwave.ru/catalog/tekstil-sportivnaya-odezhda/zhenskiy-sportivnyy-zhaket') Женская спортивная куртка
+          li
+            a.item(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/suvenirnaya-produkciya') Сувенирная продукция
+      ul#navigation
+        li.closer
+          .close-nav
+        li
+          span.call-city-picker.a.hidden-md.hidden-lg
+            i.fa.fa-map
+            |  Город:
+            span.location-city Москва
+        li
+          a.catalog-opener.hidden-md.hidden-lg
+            i.fa.fa-star
+            |  Каталог
+            span.right-arrow
+        li
+          a.hidden-md.hidden-lg(href='/catalog/')
+            i.fa.fa-tag
+            |  Спецпредложения
+        li
+          a.hidden-md.hidden-lg(href='/login')
+            i.fa.fa-user
+            |  Вход / Регистрация
+        li.small
+          a(href='http://yii2.madwave.ru/world/') Блог
+        li.small
+          a(href='/about') О нас
+        li.small
+          a(href='/about/info/delivery') Доставка
+        li.small
+          a(href='/about/magazini') Адреса магазинов
+        li.small
+          a(href='http://b2b.madwave.ru/') B2B
+        li.small
+          a(href='/kak-poluchit-kartu-postoyannogo-pokupatelya')
+            span.hidden-xs.hidden-sm.hidden-md Скидочная
+            |   карта
+            sup.hidden-xs.hidden-sm.hidden-md ограничено
+    .pull-right.nav-right
+      .hidden-xs.hidden-sm
+        a(href='/login')
+          i.fa.fa-user
+      span.pipe.hidden-xs.hidden-sm |
+      div
+        a.cart-container(href='/checkout/cart/index')
+          i.fa.fa-shopping-bag
+            span.cart-counter
+      span.pipe.hidden-xs.hidden-sm |
+      #search
+        i.search-submit.fa.fa-search
+        form(action='/catalog/search', method='get')
+          input#search-autocomplete-desktop(name='keywords', type='text')

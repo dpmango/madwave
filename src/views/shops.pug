@@ -1,0 +1,223 @@
+doctype html
+html(lang="ru-RU")
+  include shared/head.pug
+
+  body.catalog.view
+    // TEMP
+    <script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+
+    #wrap
+      include shared/header.pug
+      .page-buffer
+      .breadcrumbs_container.mb30
+        .container
+          ul.breadcrumb
+            li
+              a(href='/') Главная
+            li.active
+              a(href='#') Адреса магазинов
+
+      .container
+        .product-view.row.mb60
+          #variant.ajax-loading
+            .clearfix
+              .col-xs-12.top-caption
+                h1
+                  | Адреса магазинов
+              .shops-mobile-filter.hidden-sm
+                .shops-mobile-filter-toggle.active#shopHideFilters
+                  i.fa.fa-times
+
+                .col-sm-6
+                  .form-group.form-group--bold-label
+                    label Режим работы
+                    input.form-control.form-control--short.rad0(type="text" placeholder="с")
+                    input.form-control.form-control--short.rad0(type="text" placeholder="по")
+                .col-sm-6.mt20.shops-checkboxes
+                  label.clearfix
+                    input.checkbox(name='shops24h', type='checkbox')
+                    span
+                    | 24 часа
+
+                  label.clearfix
+                    input.checkbox(name='shopsOpenNow', type='checkbox')
+                    span
+                    | Работает сейчас
+                .form-group.form-group--bold-label
+                  .shops-quick-links
+                    a(href="#") Электроный каталог
+                    a(href="#") Погашение кредита
+                    a(href="#") Терминал оплаты
+                    a(href="#") Настройки
+                    a(href="#") Банкомат
+                    a(href="#") Выдача кредитных карт
+              .col-xs-12
+                .shops-wrapper.hidden-xs
+                  // top filter
+                  .row
+                    .col-sm-6
+                      .form-group.form-group--bold-label
+                        label Введите адрес магазина
+                        input.form-control.rad0.form-control--search(type="text" placeholder="Например: Индустриальный проспект 70")
+                        .shops-quick-links
+                          a(href="#") Электроный каталог
+                          a(href="#") Погашение кредита
+                          a(href="#") Терминал оплаты
+                          a(href="#") Настройки
+                          a(href="#") Банкомат
+                          a(href="#") Выдача кредитных карт
+                    .col-sm-6
+                      .row
+                        .col-sm-6
+                          .form-group.form-group--bold-label
+                            label Режим работы
+                            input.form-control.form-control--short.rad0(type="text" placeholder="с")
+                            input.form-control.form-control--short.rad0(type="text" placeholder="по")
+                        .col-sm-6.mt20.shops-checkboxes
+                          label.clearfix
+                            input.checkbox(name='shops24h', type='checkbox')
+                            span
+                            | 24 часа
+
+                          label.clearfix
+                            input.checkbox(name='shopsOpenNow', type='checkbox')
+                            span
+                            | Работает сейчас
+                  // sorting
+                  .row.hidden
+                    .col-sm-6
+                      .shops-result-num Найдено 15 магазинов
+                    .col-sm-6
+                      .pull-right
+                        a.shops-filter-btn(href="#")
+                          i.ico.ico-filter
+                          span Списком
+                        a.shops-filter-btn.active(href="#")
+                          i.ico.ico-loc
+                          span На карте
+                // mobile sorting
+                .shops-wrapper-mobile.visible-xs
+                  .row
+                    .col-xs-3
+                      a.btn.btn-outline#shopsShowFilters(href="#")
+                        i.fa.fa-filter
+                    .col-xs-6.text-center
+                      a.btn.btn-outline#shopsShowList.active(href="#")
+                        i.fa.fa-bars
+                      a.btn.btn-outline#shopsShowMap(href="#")
+                        i.fa.fa-map-marker
+                    .col-xs-3.text-right
+                      a.btn.btn-outline(href="#")
+                        i.fa.fa-search
+
+                // results
+                .shops-results.active
+                  .row
+                    .col-sm-4.shops-results-scroll.active
+                      .border-left
+                        .shops-result-num Найдено 15 магазинов
+
+                        .shops-results-item(data-id="1").active
+                          .shops-results-item-toggle.active
+                            i.fa.fa-caret-down
+                          .shops-results-row
+                            i.ico.ico-metro
+                            span Проспект Большевиков
+                          .shops-results-row
+                            i.ico.ico-loc-gray
+                            span ул. Джона Рида, 8, к.2
+                          .shops-results-row
+                            i.ico.ico-time
+                            span 10:00 - 21:00
+                          .shops-results-row
+                            i.ico.ico-mobile
+                            span +7 911 760 82 98
+                          .shops-results-row
+                            i.ico.ico-delivery
+                            span <b>Самовывоз:</b> Да
+                          .shops-results-row
+                            i.ico.ico-place
+                            span ЦВВС "Невская Волна"
+                        //next
+                        .shops-results-item(data-id="2")
+                          .shops-results-item-toggle
+                            i.fa.fa-caret-down
+                          .shops-results-row
+                            i.ico.ico-metro
+                            span Проспект Большевиков
+                          .shops-results-row
+                            i.ico.ico-loc-gray
+                            span ул. Джона Рида, 8, к.2
+                          .shops-results-row
+                            i.ico.ico-time
+                            span 10:00 - 21:00
+                          .shops-results-row
+                            i.ico.ico-mobile
+                            span +7 911 760 82 98
+                          .shops-results-row
+                            i.ico.ico-delivery
+                            span <b>Самовывоз:</b> Да
+                          .shops-results-row
+                            i.ico.ico-place
+                            span ЦВВС "Невская Волна"
+                        //next
+                        .shops-results-item(data-id="3")
+                          .shops-results-item-toggle
+                            i.fa.fa-caret-down
+                          .shops-results-row
+                            i.ico.ico-metro
+                            span Проспект Большевиков
+                          .shops-results-row
+                            i.ico.ico-loc-gray
+                            span ул. Джона Рида, 8, к.2
+                          .shops-results-row
+                            i.ico.ico-time
+                            span 10:00 - 21:00
+                          .shops-results-row
+                            i.ico.ico-mobile
+                            span +7 911 760 82 98
+                          .shops-results-row
+                            i.ico.ico-delivery
+                            span <b>Самовывоз:</b> Да
+                          .shops-results-row
+                            i.ico.ico-place
+                            span ЦВВС "Невская Волна"
+                        //next
+                        .shops-results-item(data-id="3")
+                          .shops-results-item-toggle
+                            i.fa.fa-caret-down
+                          .shops-results-row
+                            i.ico.ico-metro
+                            span Проспект Большевиков
+                          .shops-results-row
+                            i.ico.ico-loc-gray
+                            span ул. Джона Рида, 8, к.2
+                          .shops-results-row
+                            i.ico.ico-time
+                            span 10:00 - 21:00
+                          .shops-results-row
+                            i.ico.ico-mobile
+                            span +7 911 760 82 98
+                          .shops-results-row
+                            i.ico.ico-delivery
+                            span <b>Самовывоз:</b> Да
+                          .shops-results-row
+                            i.ico.ico-place
+                            span ЦВВС "Невская Волна"
+
+                    .col-sm-8.shops-results-map.no-pad-l
+                      // google map
+                      #shopsMap
+                      script.
+                        function initMap() {
+                        var map = new google.maps.Map(document.getElementById('shopsMap'), {
+                            center: {lat: -34.397, lng: 150.644},
+                            scrollwheel: false,
+                            zoom: 8
+                          });
+                        }
+                      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB7zn-91hwctgHBe_pkvWARH2m8rRq3Zhs&callback=initMap', async='', defer='')
+
+
+
+    include shared/footer.pug

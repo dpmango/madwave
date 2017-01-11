@@ -1,0 +1,174 @@
+// SHOPS
+.shops
+  &-wrapper
+    border: 1px solid $borderColor
+    padding: 35px
+    &-mobile
+      .btn-outline
+        padding-left: 10px
+        padding-right: 10px
+        width: 40px
+        text-align: center
+        &.active, &:hover
+          background: #cacaca
+          box-shadow: none
+        .ico
+          margin-right: 0
+        .fa
+          font-size: 20px
+          color: $fontColor
+
+  &-checkboxes
+    display: flex
+    justify-content: space-between
+  &-quick-links
+    margin-top: 15px
+    a
+      display: inline-block
+      padding: 2px 3px
+      text-decoration: underline
+      color: $fontGreyColor
+      transition: all .3s ease
+      &:hover
+        color: $color_link
+  // filtration
+  &-result-num
+    font-size: 16px
+    padding-top: 10px
+    padding-left: 40px
+    @include responsive-max($xs)
+      display: none
+  &-filter-btn
+    display: inline-block
+    border: 1px solid $borderColor
+    padding: 8px 15px
+    margin-left: 10px
+    color: $fontColor
+    transition: all .3s ease
+    .ico
+      opacity: .5
+      transition: all .2s ease
+    &:hover, &.active
+      border-color: #323232
+      text-decoration: none
+      .ico
+        opacity: 1
+
+  //Results
+  &-results
+    padding: 0
+    &.active
+      display: block
+    &-scroll
+      height: 510px
+      overflow-y: scroll
+      @include responsive-max($xs)
+        display: none
+        height: auto
+        padding-left: 0
+        padding-right: 0
+        margin-top: 30px
+        &.active
+          display: block
+      .border-left
+        border-left: 1px solid $borderColor
+        @include responsive-max($xs)
+          border-left: 0
+
+    &-map
+      @include responsive-max($xs)
+        display: none
+        margin-top: 30px
+        &.active
+          display: block
+    &-item
+      padding: 35px 40px
+      border-bottom: 1px solid $borderColor
+      position: relative
+      @include responsive-max($sm)
+        padding-left: 20px
+        padding-right: 20px
+      @include responsive-max($xs)
+        padding: 30px
+        cursor: pointer
+        &:hover
+          background: rgba(#f3f3f3, .5)
+      &.active
+        @include responsive-max($xs)
+          background: #f3f3f3
+        .shops-results-row
+          display: block
+      &-toggle
+        display: none
+        @include responsive-max($xs)
+          display: block
+          position: absolute
+          right: 15px
+          top: 25px
+          width: 20px
+          height: 20px
+          padding-left: 5px
+          padding-top: 1px
+          border-radius: 50%
+          border: 1px solid #cbcbcb
+        &.active
+          @include responsive-max($xs)
+            border: 1px solid $fontColor
+            .fa
+              transform: rotate(180deg)
+
+    &-row
+      font-size: 16px
+      margin-bottom: 11px
+      @include responsive-max($xs)
+        display: none
+        &:nth-child(3), &:nth-child(2)
+          display: block
+      .ico
+        margin-right: 15px
+
+  &-mobile-filter
+    background: #f3f3f3
+    position: absolute
+    top: -27px
+    left: 0
+    width: 100%
+    z-index: 10
+    padding-top: 30px
+    padding-left: 15px
+    display: none
+    @include responsive($sm)
+      display: none !important
+    &.active
+      display: block
+    &-toggle
+      @include responsive-max($xs)
+        display: block
+        cursor: pointer
+        position: absolute
+        right: 15px
+        top: 20px
+        width: 20px
+        height: 20px
+        padding-left: 3px
+        padding-top: 2px
+        border-radius: 50%
+        border: 1px solid #cbcbcb
+      &.active
+        @include responsive-max($xs)
+          border: 1px solid $fontColor
+          .fa
+            transform: rotate(180deg)
+
+
+#shopsShowMap
+  margin-left: -1px
+
+#shopsMap
+  height: 510px
+  width: 100%
+
+.shops-wrapper .form-control--short
+  @include responsive-max($sm)
+    &:last-child
+      margin-top: 10px

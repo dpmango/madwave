@@ -1,0 +1,512 @@
+doctype html
+html(lang="ru-RU")
+  include shared/head.pug
+
+  body.catalog.view
+    // TEMP
+    <script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+
+    #wrap
+      include shared/header.pug
+      .page-buffer
+      .breadcrumbs_container.mb30
+        .container
+          ul.breadcrumb
+            li
+              a(href='/') Главная
+            li
+              a(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya') Инвентарь для плавания
+            li
+              a(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki') Доски и калабашки
+            li.active CORE ALIGNMENT
+      .container
+        .product-view.row.mb60
+          #variant.ajax-loading
+            .clearfix
+              .col-xs-12.top-caption
+                h1
+                  | CORE ALIGNMENT
+                // <div class="pull-right">
+                //
+                // <b>
+                // </b>(
+                // голоса)
+                // </div>
+              .col-xs-12
+                .marketing-labels
+                  .labels
+                    // <div class="label"><i class="fa fa-gift"></i>Бонус про покупке</div>
+                    .label.card
+                      i.fa.fa-credit-card
+                      | -10% при оплате картой
+                    // <div class="label review"><i class="fa fa-comment"></i>Приз за отзыв</div>
+              .col-md-4.col-sm-6.col-xs-12.p0
+                .col-xs-12
+                  .view_img
+                    img#zoom(width='100%', alt='Калабашка CORE ALIGNMENT', src='http://yii2.madwave.ru/images/large/pic_1/10020940.jpg', data-zoom-image='http://yii2.madwave.ru/images/original/pic_1/10020940.jpg')
+                .col-xs-12
+                  .all_imgs.clearfix
+                    img(width='100%', src='http://yii2.madwave.ru/images/small/pic_1/10020940.jpg', alt='Калабашка CORE ALIGNMENT')
+                    img(width='100%', src='http://yii2.madwave.ru/images/small/pic_2/10020940.jpg', alt='Калабашка CORE ALIGNMENT')
+                    img(width='100%', src='http://yii2.madwave.ru/images/small/pic_3/10020940.jpg', alt='Калабашка CORE ALIGNMENT')
+                    img(width='100%', src='http://yii2.madwave.ru/images/small/pic_4/10020940.jpg', alt='Калабашка CORE ALIGNMENT')
+              #product-description-width.col-sm-6.col-md-8.col-xs-12
+              .col-md-4.col-md-push-4.col-sm-6.col-xs-12
+                .col-xs-12.cleaerfix.add-to-cart-container
+                  .col-xs-12
+                    .row
+                      b.titled.cost Цена
+                      span.price
+                        | 990.00
+                        i.fa.fa-rub
+                      span.target-price
+                        span.color-primary
+                          i.fa.fa-credit-card
+                          |                                     891.00
+                          i.fa.fa-rub
+                    .row
+                      b.titled.cost Скидка по карте
+                      span.card-discount
+                        | 99.00
+                        i.fa.fa-rub
+                    .colors.mb20
+                      b.titled Цвет
+                      br
+                      .clearfix.mb20
+                        select.form-control(name='color', style='width: auto')
+                          option(value='10020940', selected='') Зеленый
+                    b.titled Количество
+                    .mb30
+                      select#add_to_cart-quantity.form-control(name='quantity', style='width: 100%;')
+                        option(value='1', selected='') 1
+                        option(value='2') 2
+                        option(value='3') 3
+                        option(value='4') 4
+                        option(value='5') 5
+                        option(value='6') 6
+                        option(value='7') 7
+                        option(value='8') 8
+                        option(value='9') 9
+                    span.add_to_cart-ajax.btn-ga-cart-action.btn.btn-danger.btn-add_to_cart(data-sku='10020940', data-action='add', style='width: 100%', data-product='{"id":"M0727 01","name":"CORE ALIGNMENT","category":"Калабашка","brand":"Mad Wave","variant":"M0727 01 0 00W","price":990}')
+                      | В корзину
+                      i.fa.fa-cart-plus
+              .col-md-4.col-md-pull-4.col-xs-12.information
+                h3 Информация
+                .keys
+                  | Артикул: M0727 01 0 00W
+                  br
+                  |  Состав: ЭВА
+                .description
+                //
+                // <div class="review-preview">
+                // <blockquote>
+                // <div class="color-primary mb20">
+                //
+                // </div>
+                // <p>
+                //
+                // </p>
+                // <small>
+                // ,
+                // </small>
+                // </blockquote>
+                // </div>
+                //
+                //
+          .col-xs-12
+            hr.m60
+          .col-xs-12
+            h2.text-center.mb60 Ключевые особенности
+            .row
+              .col-md-4.col-md-offset-4(class="'col-xs-12")
+                .text-center.clearfix
+                  .img-container(style="background: url('http://yii2.madwave.ru/images/features/uploads/0bac9bde330388fb932fd549692a7283.jpg') center center no-repeat; background-size: contain")
+                  h4(style='height: 34px; font-size: 16px; text-transform: uppercase')
+                  p(style='height: 50px; font-size: 14px; color: #868686')
+                  // <span class="btn btn-default feature-detail" style="cursor:pointer" data-feature_id="
+                  // ">Detail</span>
+      .shadow
+        .container
+          .product-view.row.mb60
+            .col-xs-12
+              h2.text-center.mb60 С этим товаром покупают
+              .row
+                // <div class="swipe-wrap">
+                .related-products
+                  .catalog-border.col-md-4.col-sm-6.col-lg-3
+                    .product
+                      .image
+                        a(href='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-dzhammery/muzhskie-dzhammery-antihlor/jammer-pbt?sku=10011045')
+                          img(src='http://yii2.madwave.ru/images/medium/pic_1/10011045.jpg', alt='Мужские джаммеры антихлор Jammer PBT')
+                      .caption
+                        .data-link.fsize-1.overflow(data-url='http://yii2.madwave.ru/catalog/muzhskie-sportivnye-plavki/muzhskie-dzhammery/muzhskie-dzhammery-antihlor/jammer-pbt?sku=10011045') Jammer PBT
+                        small.fsize-2.overflow Мужские джаммеры антихлор
+                        // <div class="rating">
+                        //
+                        // <b>
+                        // </b>(
+                        // голоса)
+                        // </div>
+                        hr
+                        .clearfix(style='margin-bottom: 5px')
+                          .pull-left
+                            .fsize-2
+                              | 1690
+                              i.fa.fa-rub
+                            small.fsize-1.price.color-primary
+                              i.fa.fa-credit-card(style='margin-right: 10px')
+                              | 1521
+                              i.fa.fa-rub
+                          span.btn.btn-lg.btn-danger.btn-add_to_cart.add_to_cart-modal(data-sku='10011045')
+                            i.fa.fa-cart-plus
+                  .catalog-border.col-md-4.col-sm-6.col-lg-3
+                    .product
+                      .image
+                        a(href='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/lasty/lasty-dlya-brassa/positive-drive?sku=10015586')
+                          img(src='http://yii2.madwave.ru/images/medium/pic_1/10015586.jpg', alt='Ласты для брасса Positive Drive')
+                      .caption
+                        .data-link.fsize-1.overflow(data-url='http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/lasty/lasty-dlya-brassa/positive-drive?sku=10015586') Positive Drive
+                        small.fsize-2.overflow Ласты для брасса
+                        // <div class="rating">
+                        //
+                        // <b>
+                        // </b>(
+                        // голоса)
+                        // </div>
+                        hr
+                        .clearfix(style='margin-bottom: 5px')
+                          .pull-left
+                            .fsize-2
+                              | 1990
+                              i.fa.fa-rub
+                            small.fsize-1.price.color-primary
+                              i.fa.fa-credit-card(style='margin-right: 10px')
+                              | 1791
+                              i.fa.fa-rub
+                          span.btn.btn-lg.btn-danger.btn-add_to_cart.add_to_cart-modal(data-sku='10015586')
+                            i.fa.fa-cart-plus
+                  .catalog-border.col-md-4.col-sm-6.col-lg-3
+                    .product
+                      .image
+                        a(href='http://yii2.madwave.ru/catalog/obuv/muzhskie-tapki/admiral?sku=10009782')
+                          img(src='', alt='Мужские тапки Admiral')
+                      .caption
+                        .data-link.fsize-1.overflow(data-url='http://yii2.madwave.ru/catalog/obuv/muzhskie-tapki/admiral?sku=10009782') Admiral
+                        small.fsize-2.overflow Мужские тапки
+                        // <div class="rating">
+                        //
+                        // <b>
+                        // </b>(
+                        // голоса)
+                        // </div>
+                        hr
+                        .clearfix(style='margin-bottom: 5px')
+                          .pull-left
+                            .fsize-2
+                              | 990
+                              i.fa.fa-rub
+                            small.fsize-1.price.color-primary
+                              i.fa.fa-credit-card(style='margin-right: 10px')
+                              | 891
+                              i.fa.fa-rub
+                          span.btn.btn-lg.btn-danger.btn-add_to_cart.add_to_cart-modal(data-sku='10009782')
+                            i.fa.fa-cart-plus
+                  .catalog-border.col-md-4.col-sm-6.col-lg-3
+                    .product
+                      .image
+                        a(href='http://yii2.madwave.ru/catalog/lopatki/lopatki/freestyle?sku=10020198')
+                          img(src='http://yii2.madwave.ru/images/medium/pic_1/10020198.jpg', alt='Лопатки FREESTYLE')
+                      .caption
+                        .data-link.fsize-1.overflow(data-url='http://yii2.madwave.ru/catalog/lopatki/lopatki/freestyle?sku=10020198') FREESTYLE
+                        small.fsize-2.overflow Лопатки
+                        // <div class="rating">
+                        //
+                        // <b>
+                        // </b>(
+                        // голоса)
+                        // </div>
+                        hr
+                        .clearfix(style='margin-bottom: 5px')
+                          .pull-left
+                            .fsize-2
+                              | 990
+                              i.fa.fa-rub
+                            small.fsize-1.price.color-primary
+                              i.fa.fa-credit-card(style='margin-right: 10px')
+                              | 891
+                              i.fa.fa-rub
+                          span.btn.btn-lg.btn-danger.btn-add_to_cart.add_to_cart-modal(data-sku='10020198')
+                            i.fa.fa-cart-plus
+
+        // NEW CONTENT
+        .container
+          .row
+            .col-sm-12
+              .product-tabs
+                a.active(href="#")
+                  span Отзывы клиентов
+                  i.fa.fa-caret-down
+                a(href="#")
+                  span Вопросы-ответы
+                  i.fa.fa-caret-down
+                a(href="#")
+                  span Доставка/оплата
+                  i.fa.fa-caret-down
+
+            // Tabs content
+            .product-tabs-content.active
+              .col-sm-12.mb60
+                .product-review-summary
+                  .row
+                    .col-sm-3
+                      .product-review-sum 5.0
+                      .product-review-stars
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                      .product-review-based Оценка покупателей рассчитана <br> на основании 123 отзывов
+                    .col-xs-3.col-sm-2
+                      .product-review-char
+                        i.fa.fa-star-o.c_blue
+                      .product-review-rate 5.0
+                      .product-review-name Удобство
+                    .col-xs-3.col-sm-2
+                      .product-review-char
+                        i.fa.fa-star-o.c_green
+                      .product-review-rate 5.0
+                      .product-review-name Качество
+                    .col-xs-6.col-sm-3
+                      .product-review-char
+                        img.img-responsive(src="http://localhost:3000/images/goods-rating-size.png")
+                      .product-review-rate 4.5
+                      .product-review-name Соотвествует размеру
+
+              // TESTIMONIALS
+              .col-sm-12.mb60
+                h2 Самый полезный отзыв
+                .product-testimonial
+                  .row
+                    .col-sm-2.no-pad-r
+                      .product-testimonial-author Алексей Воеводин
+                      .product-testimonial-date Вчера в 21:00
+                      .product-testimonial-char Размер:  <span>XXL</span>
+                      .product-testimonial-char Соответствие рзмеру:  <span class="t_primary">Да</span>
+                      .product-testimonial-rating
+                        span.label Удобство
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        span (4.8 ср. рейтинг)
+                      .product-testimonial-rating
+                        span.label Качество
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star.no-fill
+                        span (4.8 ср. рейтинг)
+                    .col-sm-10
+                      .product-testimonial-content
+                        .fl-r
+                          i.fa.fa-share-alt
+                        .product-testimonial-content-type
+                          i.fa.fa-plus
+                          p Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                        .product-testimonial-content-type
+                          i.fa.fa-minus
+                          p Нишевый проект, пренебрегая деталями, создает рекламный клаттер, учитывая современные тенденции.
+                        .product-testimonial-content-type
+                          i.fa.fa-comment-o
+                          p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг. Итак, ясно, что сегментация рынка изменяет мониторинг активности. Медиамикс уравновешивает анализ рыночных цен. Целевая аудитория индуктивно экономит опрос. По мнению ведущих маркетологов, VIP-мероприятие настроено позитивно.
+                        .row
+                          .col-sm-6
+                            .product-testimonial-thumbs
+                              .control(data-action="upvote")
+                                i.fa.fa-thumbs-up
+                                span 30
+                              .control(data-action="downvote")
+                                i.fa.fa-thumbs-down
+                                span 0
+                          .col-sm-6.text-right
+                            .product-testimonial-controls
+                              a.btn.btn-outline(href="#") Ответить
+                              a(href="#")
+                                i.fa.fa-comment-o
+                                span 1 комментарий
+                        // replies
+                        .product-testimonial-replies
+                          .fl-r
+                            a.product-testimonial-replies-toggle(href="#") Скрыть
+                          .product-testimonial-author Алексей Воеводин
+                          .product-testimonial-date Вчера в 21:00
+                          .product-testimonial-content-type
+                            i.fa.fa-comment-o
+                            p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг.
+
+              .col-sm-12.mb60
+                h2 Новые отзывы
+                .product-testimonial
+                  .row
+                    .col-sm-2.no-pad-r
+                      .product-testimonial-author Алексей Воеводин
+                      .product-testimonial-date Вчера в 21:00
+                      .product-testimonial-char Размер:  <span>XXL</span>
+                      .product-testimonial-char Соответствие рзмеру:  <span class="t_primary">Да</span>
+                      .product-testimonial-rating
+                        span.label Удобство
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        span (4.8 ср. рейтинг)
+                      .product-testimonial-rating
+                        span.label Качество
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star
+                        i.fa.fa-star.no-fill
+                        span (4.8 ср. рейтинг)
+                    .col-sm-10
+                      .product-testimonial-content
+                        .fl-r
+                          i.fa.fa-share-alt
+
+                        .product-testimonial-content-type
+                          i.fa.fa-plus
+                          p Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                        .product-testimonial-content-type
+                          i.fa.fa-minus
+                          p Нишевый проект, пренебрегая деталями, создает рекламный клаттер, учитывая современные тенденции.
+                        .product-testimonial-content-type
+                          i.fa.fa-comment-o
+                          p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг. Итак, ясно, что сегментация рынка изменяет мониторинг активности. Медиамикс уравновешивает анализ рыночных цен. Целевая аудитория индуктивно экономит опрос. По мнению ведущих маркетологов, VIP-мероприятие настроено позитивно.
+                        .row
+                          .col-sm-6
+                            .product-testimonial-thumbs
+                              .control(data-action="upvote")
+                                i.fa.fa-thumbs-up
+                                span 30
+                              .control(data-action="downvote")
+                                i.fa.fa-thumbs-down
+                                span 0
+                          .col-sm-6.text-right
+                            .product-testimonial-controls
+                              a.btn.btn-outline(href="#") Ответить
+                              a(href="#")
+                                i.fa.fa-comment-o
+                                span 1 комментарий
+
+                        // replies
+                        .product-testimonial-replies
+                          .fl-r
+                            a.product-testimonial-replies-toggle(href="#") Скрыть
+
+                          .product-testimonial-author Алексей Воеводин
+                          .product-testimonial-date Вчера в 21:00
+                          .product-testimonial-content-type
+                            i.fa.fa-comment-o
+                            p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг.
+
+              .col-sm-offset-2.col-sm-10
+                .product-testimonial-more
+                  a.btn.btn-primary(href="#") Написать отзыв
+                  a(href="#")
+                    i.fa.fa-refresh
+                    | Загрузить еще
+
+
+            // Q&A
+            .product-tabs-content
+              .col-sm-12.mb60.mt30
+                h2 Самый ценный ответ
+                  .fl-r
+                    a.btn.btn-primary(href="#") Задать вопрос
+                .product-testimonial
+                  .row
+                    .col-sm-2.no-pad-r
+                      .product-testimonial-author Алексей Воеводин
+                      .product-testimonial-date Вчера в 21:00
+                    .col-sm-10
+                      .product-testimonial-content
+                        .product-testimonial-content-type
+                          i.fa.fa-question
+                          p Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                        .row
+                          .col-sm-6
+                            .product-testimonial-thumbs
+                              .control(data-action="upvote")
+                                i.fa.fa-thumbs-up
+                                span 30
+                              .control(data-action="downvote")
+                                i.fa.fa-thumbs-down
+                                span 0
+                          .col-sm-6.text-right
+                            .product-testimonial-controls
+                              a.btn.btn-outline(href="#") Ответить
+                              a(href="#")
+                                i.fa.fa-comment-o
+                                span 1 комментарий
+
+                        // replies
+                        .product-testimonial-replies
+                          .fl-r
+                            a.product-testimonial-replies-toggle(href="#") Скрыть
+                          .product-testimonial-author Алексей Воеводин <span>- специалист компании <img class="img-responsive" src="http://localhost:3000/images/madwave-grayscale.png" /></span>
+                          .product-testimonial-date Вчера в 21:00
+                          .product-testimonial-content-type
+                            i.fa.fa-comment-o
+                            p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг.
+              .col-sm-12.mb60
+                h2 Новые ответы
+                .product-testimonial
+                  .row
+                    .col-sm-2.no-pad-r
+                      .product-testimonial-author Алексей Воеводин
+                      .product-testimonial-date Вчера в 21:00
+                    .col-sm-10
+                      .product-testimonial-content
+                        .product-testimonial-content-type
+                          i.fa.fa-question
+                          p Наряду с этим, агентская комиссия концентрирует поведенческий таргетинг. Портрет потребителя искажает сублимированный анализ зарубежного опыта, осознав маркетинг как часть производства. Опрос спонтанно допускает поведенческий таргетинг.
+                        .row
+                          .col-sm-6
+                            .product-testimonial-thumbs
+                              .control(data-action="upvote")
+                                i.fa.fa-thumbs-up
+                                span 30
+                              .control(data-action="downvote")
+                                i.fa.fa-thumbs-down
+                                span 0
+                          .col-sm-6.text-right
+                            .product-testimonial-controls
+                              a.btn.btn-outline(href="#") Ответить
+                              a(href="#")
+                                i.fa.fa-comment-o
+                                span 1 комментарий
+
+                        // replies
+                        .product-testimonial-replies
+                          .fl-r
+                            a.product-testimonial-replies-toggle(href="#") Скрыть
+                          .product-testimonial-author Алексей Воеводин <span>- специалист компании <img class="img-responsive" src="http://localhost:3000/images/madwave-grayscale.png" /></span>
+                          .product-testimonial-date Вчера в 21:00
+                          .product-testimonial-content-type
+                            i.fa.fa-comment-o
+                            p Сервисная стратегия экономит ролевой процесс стратегического планирования. Департамент маркетинга и продаж категорически программирует коллективный пресс-клиппинг.
+
+              .col-sm-offset-2.col-sm-10
+                .product-testimonial-more
+                  a.btn.btn-primary(href="#") Задать вопрос
+                  a(href="#")
+                    i.fa.fa-refresh
+                    | Загрузить еще
+            .product-tabs-content
+
+
+    include shared/footer.pug

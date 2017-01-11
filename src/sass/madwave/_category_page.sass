@@ -1,0 +1,105 @@
+.category-page
+  h1
+    font-size: 30px
+    font-weight: 400
+    margin-top: 0
+  .category-page__header
+    margin-bottom: 30px
+    margin-top: 40px
+    span.text-right
+      font-size: 16px
+      padding-top: 10px
+  .product
+    border: transparent
+
+  .catalog-border
+    border: 1px solid #eee
+    margin-left: -1px
+    margin-bottom: -1px
+
+.product_list_title
+  border-right: 1px solid #eee
+  width: calc(100% - 4px)
+
+.category__header
+  height: 160px
+  overflow: hidden
+
+.filter_form_wrap
+  margin-bottom: 25px
+  @include responsive($md)
+    padding-right: 0
+
+#filter_form
+  display: none
+  padding: 26px 38px
+  border: 1px solid #eee
+  @include responsive($sm)
+    display: block !important
+  h4
+    margin-top: 0
+    font-size: 18px
+    font-weight: 300
+
+.product_list__sorting
+  padding: 30px 36px
+  font-size: 16px
+  border-bottom: 1px solid #eee
+  margin-bottom: -1px
+  b
+    font-weight: 500
+  a
+    margin-left: 30px
+    text-decoration: none
+    color: #a1a1a1
+    &.selected
+      color: #000
+      text-decoration: underline
+
+.category-description
+  color: #919191
+  font-size: 18px
+  padding-top: 70px
+
+.category-description-devider
+  margin-top: 70px
+  margin-bottom: 0
+
+.colorpick-form
+  label
+    display: block
+    font-size: 14px
+    font-weight: normal
+
+label
+  cursor: pointer
+  font-size: 14px
+  font-weight: normal
+
+.checkbox
+  display: none
+.checkbox + span
+  width: 20px
+  height: 20px
+  border: 1px solid #ccc
+  border-radius: 2px
+  background-color: #fff
+  display: inline-block
+  margin-top: 10px
+  margin-bottom: -5px
+  margin-right: 10px
+  text-align: center
+  color: #fff
+  cursor: pointer
+
+.checkbox:checked + span
+  background: $color_primary
+  border: 1px solid $color_primary
+
+.checkbox:checked + span:before
+  content: '\2714'
+
+.product_list_container
+  padding: 0
+  @include responsive($md)
+    padding-right: 15px

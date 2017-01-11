@@ -1,0 +1,140 @@
+@charset "UTF-8"
+
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinTextpro/pfdintextpro-bold.ttf')
+  font-style: normal
+  font-weight: 600
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinTextpro/pfdintextpro-medium.ttf')
+  font-style: normal
+  font-stretch: normal
+  font-weight: 500
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinTextpro/pfdintextpro-regular.ttf')
+  font-style: normal
+  font-stretch: normal
+  font-weight: 400
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinTextpro/pfdintextpro-light.ttf')
+  font-style: normal
+  font-stretch: normal
+  font-weight: 300
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinTextpro/pfdintextpro-thin.ttf')
+  font-style: normal
+  font-stretch: normal
+  font-weight: 200
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinCondPro/pfdintextcondpro-bold.ttf')
+  font-style: normal
+  font-stretch: condensed
+  font-weight: 600
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinCondPro/pfdintextcondpro-medium.ttf')
+  font-style: normal
+  font-stretch: condensed
+  font-weight: 500
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinCondPro/pfdintextcondpro-regular.ttf')
+  font-style: normal
+  font-stretch: condensed
+  font-weight: 400
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinCondPro/PFDinTextCondPro-Light.ttf')
+  font-style: normal
+  font-stretch: condensed
+  font-weight: 300
+@font-face
+  font-family: 'PF Din Text pro'
+  src: url('../fonts/PFDinCondPro/pfdintextcondpro-thin.ttf')
+  font-style: normal
+  font-stretch: condensed
+  font-weight: 200
+
+
+html, body
+  height: 100%
+
+body
+  font-family: 'PF Din Text pro'
+  min-width: 320px
+  background: #fefefe
+
+body.locked
+  overflow: hidden
+  @include responsive($md)
+    overflow: auto
+
+a
+  color: $color_primary
+
+.a
+  color: $color_link
+  text-decoration: underline
+  cursor: pointer
+
+.pl05
+  padding-left: 7px !important
+.pr05
+  padding-right: 7px !important
+
+.rad0
+  border-radius: 0
+  box-shadow: none
+  padding: 19px
+
+.data-link
+  cursor: pointer
+
+.well
+  padding: 20px 10px
+  background: #f2f2f2
+  font-weight: 500
+  font-size: 14px
+  .icons
+    vertical-align: top
+    i
+      width: 18px
+      height: 12px
+      display: block
+      float: left
+      margin-right: 1px
+    label
+      margin-right: 10px
+
+.btn
+  border-radius: 0
+
+.btn-default.dark
+  border-color: #333
+
+.btn-danger
+  background-color: $color_cta
+  border-color: $color_cta
+
+.btn-lg
+  text-transform: uppercase
+  font-weight: 500
+  font-size: 14px
+  padding: 20px
+
+.btn-add_to_cart
+  padding: 20px 0
+  font-size: 14px
+  border-radius: 0
+  text-transform: uppercase
+
+.slide-content
+  display: none
+
+.color-primary
+  color: $color_primary !important

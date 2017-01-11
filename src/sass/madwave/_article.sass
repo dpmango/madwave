@@ -1,0 +1,140 @@
+// Article
+.article
+  &-hero
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    @include responsive-max($sm)
+      padding-top: 50px
+    @include responsive-max($xs)
+      padding-top: 30px
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      display: block
+      content: ' '
+      background: linear-gradient(0deg, rgba(black, .25) 0%, rgba(black, .5) 30%, rgba(black, .75) 100%)
+
+    &-crumbs
+      margin-top: 45px
+      font-size: 16px
+      a
+        display: inline-block
+        font-size: 16px
+        color: rgba(white, .6)
+        &.active
+          color: white
+  &-metrics
+    margin-top: 45px
+    color: white
+    font-size: 16px
+    font-weight: 500
+    @include responsive-max($xs)
+      margin-top: 20px
+  &-watch
+    display: inline-block
+    margin-right: 10px
+  &-likes
+    display: inline-block
+  &-heading
+    padding: 0
+    margin: 0
+    margin-top: 25px
+    font-size: 40px
+    text-transform: uppercase
+    line-height: 1.2em
+    font-weight: 600
+    color: white
+    @include responsive-max($xs)
+      font-size: 20px
+  &-share
+    margin-top: 30px
+    margin-bottom: 60px
+    @include responsive-max($xs)
+      margin-top: 20px
+      margin-bottom: 50px
+    &.m0
+      margin: 0
+
+    .ya-share2__icon
+      display: inline-block
+      width: 90px !important
+      height: 32px !important
+      background-repeat: no-repeat !important
+      margin-right: 10px !important
+      @include responsive-max($xs)
+        width: 80px !important
+      @media (max-width: 414px)
+        width: 55px !important
+
+
+  &-content
+    p
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 35px
+      @include responsive-max($xs)
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 25px
+    &-share
+      background: #f4f4f4
+      border-radius: 6px
+      padding: 35px 25px 30px 25px
+      &-title
+        font-size: 14px
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 10px
+
+
+.crumbs-separator
+  font-size: 14px
+  padding-left: 10px
+  color: white
+  padding-right: 10px
+
+.blog-page--inner
+  .search-in-blog
+    margin-top: 0
+
+
+// Comments
+.comment
+  border-bottom: 1px solid #f4f4f4
+  padding-top: 30px
+  padding-bottom: 30px
+  font-size: 16px
+  &:last-child
+    border-bottom: none
+  &-img
+    width: 75px
+    height: 75px
+    border-radius: 50%
+    overflow: hidden
+    @include responsive-max($xs)
+      width: 40px
+      height: 40px
+
+  &-author
+  &-content
+    color: #7f7f7f
+    font-weight: 500
+    line-height: 26px
+    margin: 10px 0
+  &-timestamp
+    color: #c7c7c7
+    float: left
+    padding-right: 20px
+  &-actions
+    a
+      display: inline-block
+      text-decoration: underline
+      color: #7f7f7f
+  &-form
+    margin-top: 50px
