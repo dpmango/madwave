@@ -7,7 +7,12 @@
 @import "nouislider"
 @import "checkout"
 @import "category_page"
+@import "merge"
+@import "icons"
 @import "blog"
+@import "article"
+@import "bonus"
+@import "shops"
 
 .alert
   margin-bottom: -45px !important
@@ -41,7 +46,6 @@
   height: auto
   margin-bottom: 60px
   overflow: hidden
-  top: -3px
   @include responsive($md)
     height: 630px
   h3, h2
@@ -91,13 +95,13 @@
     li
       button
         background: #fff
-        height: 12px
-        width: 12px
+        height: 13px
+        width: 13px
         border-radius: 100%
         &:before
-          height: 12px
-          width: 12px
-          line-height: 12px
+          height: 13px
+          width: 13px
+          line-height: 13px
           opacity: 0
     li.slick-active button:before
       opacity: .75
@@ -107,6 +111,7 @@
     height: auto
     padding-bottom: 60px
     padding-top: 110px
+    min-height: 572px
     text-align: center
     @include responsive($md)
       height: 630px
@@ -116,6 +121,12 @@
     background: url("../images/homepage_banner/swimmer-face.jpg") center center / cover no-repeat
   ._forceshell-jump
     background: url("../images/homepage_banner/forceshell_jumper.jpg") center center / cover no-repeat
+  ._morozov
+    background: url("../images/homepage_banner/imgpsh_fullsize.jpg") center center / cover no-repeat
+  ._new-year-sales
+    background: url("../images/homepage_banner/new_year_sales.jpg") center center / cover no-repeat
+
+
 
 .pinned-item
   display: block
@@ -125,14 +136,15 @@
   text-align: center
   margin-bottom: 30px
   .background
-    height: 220px
+    height: 213px
+
     margin: -30px -20px 0 -20px
     & > div
       width: 120%
-      height: 120%
+      height: 127%
       position: relative
       left: -10%
-      top: -8%
+      top: -14%
   h4
     font-size: 30px
     font-weight: 600

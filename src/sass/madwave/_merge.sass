@@ -6,7 +6,7 @@ $fontGreyColor: rgba(#2c2c2c, .7)
 
 // Helper classes & mixins
 
-@mixin responsive-max($breakpoint)
+@mixin responsive-c-max($breakpoint)
   @if $breakpoint == "xs"
     @media screen and (max-width: 768px)
       @content
@@ -50,7 +50,7 @@ html
     display: inline-block
     width: 80px
   &--search
-    background: url('http://localhost:3000/images/ico-search.png') no-repeat 95% center
+    background: url('../images/ico-search.png') no-repeat 95% center
 
 
 .btn

@@ -29,10 +29,10 @@
   @include responsive($sm)
     width: 450px
 
-label[for="secondstep-picking_up_point_fake"]
+label[for="methodpickup-picking_up_point_fake"]
   display: block
   padding: 0
-input#secondstep-picking_up_point_fake
+input#methodpickup-picking_up_point_fake
   display: none
 .btn.on-map
   &:before
@@ -190,19 +190,21 @@ h4.divide
 .checkout-cart
   padding-bottom: 70px
   .has-error:before
-    content: '!'
+    content: "!"
     display: block
-    width: 32px
-    height: 32px
+    width: 38px
+    height: 38px
     position: absolute
     right: 16px
     top: 24px
     text-align: center
     font-size: 23px
-    color: #a94442
-  .help-block
-    display: none
-    
+
+    padding-top: 6px
+
+  //.help-block
+  //  display: none
+
 .cart-check
   width: 100%
   font-size: 16px
@@ -397,8 +399,9 @@ h4.divide
     padding-top: 5px !important
     padding-bottom: 5px !important
 
-#place-result
+.place-result
   display: none
+
 
 .complete__header:before
   content: ''
@@ -410,3 +413,12 @@ h4.divide
 
 .complete__message
   font-size: 18px
+
+.has-error input[type="radio"] + span i
+  border: 1px solid #fd3a3a
+
+.field-payment-payment_method.has-error:before,
+.field-delivery-delivery_method.has-error:before
+  content: ''
+
+

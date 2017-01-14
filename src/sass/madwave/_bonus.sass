@@ -1,10 +1,10 @@
 
 // BONUS
 .bonus
-  background: url('http://localhost:3000/images/bonus-bg.png') no-repeat center
+  background: url('../images/bonus-bg.png') no-repeat center
   background-size: cover
   padding-bottom: 40px
-  @include responsive-max($xs)
+  @include responsive-c-max($xs)
     text-align: center
   &-wrap
     .breadcrumbs_container
@@ -16,21 +16,21 @@
     line-height: 1em
     color: #db3d3d
     text-transform: uppercase
-    @include responsive-max($xs)
+    @include responsive-c-max($xs)
       font-size: 34px
 
   &-subtitle
     font-size: 24px
     text-transform: uppercase
-    @include responsive-max($xs)
+    @include responsive-c-max($xs)
       font-size: 18px
   &-desc
     margin-top: 25px
     font-size: 18px
-    @include responsive-max($xs)
+    @include responsive-c-max($xs)
       font-size: 16px
   &-cards
-    @include responsive-max($xs)
+    @include responsive-c-max($xs)
       text-align: left
   &-card
     display: block
@@ -53,25 +53,25 @@
       margin-top: 15px
       text-transform: uppercase
       font-weight: 500
-      @include responsive-max($md)
+      @include responsive-c-max($md)
         margin-top: 10px
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         margin-top: 15px
     &-desc
       margin-top: 5px
       color: #999999
-      @include responsive-max($md)
+      @include responsive-c-max($md)
         margin-top: 0px
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         margin-top: 5px
 
     &-price
       margin-top: 15px
       font-size: 14px
       margin-bottom: 5px
-      @include responsive-max($md)
+      @include responsive-c-max($md)
         margin-top: 10px
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         margin-top: 15px
     &-old
       font-size: 18px
@@ -111,7 +111,7 @@
 
   &-model
     img
-      // background: url('http://localhost:3000/images/bonus-model.png') no-repeat center
+      // background: url('../images/bonus-model.png') no-repeat center
       // background-size: auto 100%
       // height: 100%
       min-height: 600px
@@ -121,12 +121,12 @@
       left: -15px
       width: 107%
       max-width: 107%
-      @include responsive-max($sm)
+      @include responsive-c-max($sm)
         min-height: 300px
 
   .img-responsive
     display: inline-block
-    
+
 .flex
   display: flex
   align-items: stretch

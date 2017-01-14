@@ -36,7 +36,7 @@
     font-size: 16px
     padding-top: 10px
     padding-left: 40px
-    @include responsive-max($xs)
+    @include responsive-c-max($xs)
       display: none
   &-filter-btn
     display: inline-block
@@ -62,7 +62,7 @@
     &-scroll
       height: 510px
       overflow-y: scroll
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         display: none
         height: auto
         padding-left: 0
@@ -72,11 +72,11 @@
           display: block
       .border-left
         border-left: 1px solid $borderColor
-        @include responsive-max($xs)
+        @include responsive-c-max($xs)
           border-left: 0
 
     &-map
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         display: none
         margin-top: 30px
         &.active
@@ -85,22 +85,22 @@
       padding: 35px 40px
       border-bottom: 1px solid $borderColor
       position: relative
-      @include responsive-max($sm)
+      @include responsive-c-max($sm)
         padding-left: 20px
         padding-right: 20px
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         padding: 30px
         cursor: pointer
         &:hover
           background: rgba(#f3f3f3, .5)
       &.active
-        @include responsive-max($xs)
+        @include responsive-c-max($xs)
           background: #f3f3f3
         .shops-results-row
           display: block
       &-toggle
         display: none
-        @include responsive-max($xs)
+        @include responsive-c-max($xs)
           display: block
           position: absolute
           right: 15px
@@ -112,7 +112,7 @@
           border-radius: 50%
           border: 1px solid #cbcbcb
         &.active
-          @include responsive-max($xs)
+          @include responsive-c-max($xs)
             border: 1px solid $fontColor
             .fa
               transform: rotate(180deg)
@@ -120,7 +120,7 @@
     &-row
       font-size: 16px
       margin-bottom: 11px
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         display: none
         &:nth-child(3), &:nth-child(2)
           display: block
@@ -142,7 +142,7 @@
     &.active
       display: block
     &-toggle
-      @include responsive-max($xs)
+      @include responsive-c-max($xs)
         display: block
         cursor: pointer
         position: absolute
@@ -155,7 +155,7 @@
         border-radius: 50%
         border: 1px solid #cbcbcb
       &.active
-        @include responsive-max($xs)
+        @include responsive-c-max($xs)
           border: 1px solid $fontColor
           .fa
             transform: rotate(180deg)
@@ -169,6 +169,6 @@
   width: 100%
 
 .shops-wrapper .form-control--short
-  @include responsive-max($sm)
+  @include responsive-c-max($sm)
     &:last-child
       margin-top: 10px
