@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log('loaded');
+
  	// Prevent # errors
 	$('[href="#"]').click(function (e) {
 		e.preventDefault();
@@ -69,6 +69,12 @@ $(document).ready(function(){
       $(this).parent().parent().find('.product-testimonial-content-type').fadeIn();
     }
 
+  });
+
+  $('.delivery-wrapper').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).find('.delivery-item-toggle').toggleClass('active');
+    $(this).find('.delivery-content-hidden').toggleClass('active');
   });
 
 });

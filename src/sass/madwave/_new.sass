@@ -1,0 +1,283 @@
+// Morozov
+
+#main-banner
+  &.no-m
+    margin-bottom: 0
+
+  ._morozov.inner
+    background: url('http://localhost:3002/images/morozov-slider.png') no-repeat top center
+    background-size: cover
+
+  .banner
+    &.inner
+      h2
+        margin-bottom: 0
+
+    &-country
+      font-size: 16px
+      font-weight: 600
+    &-quote
+      font-style: italic
+      font-weight: 300
+      font-size: 22px
+      margin-bottom: 40px
+      margin-top: 20px
+      @include responsive-c-max($sm)
+        font-size: 16px
+
+.sportsmen
+  &-short
+    background: #ffe036
+    padding: 40px 0
+    @include responsive-c-max($xs)
+      padding: 25px 0
+    &-name
+      font-size: 20px
+      font-weight: 600
+      text-align: center
+      text-transform: uppercase
+    &-effort
+      font-weight: 300
+      font-size: 20px
+      text-align: center
+      line-height: 1
+      margin-top: 5px
+      &.mt20
+        margin-top: 20px
+      span
+        font-size: 50px
+        font-weight: 600
+
+  &-achievements
+    margin-bottom: 30px
+    margin-top: 10px
+    @include responsive-c-max($xs)
+      margin-bottom: 10px
+    &-block
+      font-size: 16px
+      line-height: 26px
+      border-left: 7px solid transparent
+      padding-left: 25px
+      margin: 30px 0
+      min-height: 70px
+      @include responsive-c-max($sm)
+        font-size: 14px
+      @include responsive-c-max($xs)
+        min-height: auto
+        font-size: 14px
+        margin: 15px 0
+    .block--yellow
+      border-color: #f4ce25
+    .block--red
+      border-color: #fd3a3a
+    .block--green
+      border-color: #63cfa3
+    .block--blue
+      border-color: #00b0ce
+    .block--violet
+      border-color: #6464c5
+    .block--pink
+      border-color: #e176e2
+    .block--orange
+      border-color: #f99f36
+
+  &-quote
+    background: #e3fdff
+    &-title
+      font-weight: 600
+      font-size: 20px
+      text-transform: uppercase
+      margin-bottom: 20px
+      @include responsive-c-max($xs)
+        font-size: 18px
+    p
+      font-size: 18px
+      font-style: italic
+      font-weight: 300
+      @include responsive-c-max($xs)
+        font-size: 16px
+    &-text
+      margin-top: 90px
+      margin-bottom: 140px
+      position: relative
+      @include responsive-c-max($xs)
+        margin-top: 45px
+        margin-bottom: 40px
+
+    .fa
+      font-size: 40px
+      color: #9ddbe0
+    .fa-angle-double-left
+      position: absolute
+      top: -10px
+      left: -30px
+    .fa-angle-double-right
+      position: absolute
+      right: 0px
+      bottom: -10px
+      z-index: 3
+
+    &-image
+      background: url('http://localhost:3002/images/morozov-quote.png') no-repeat center
+      width: 720px
+      height: 530px
+      background-size: contain
+      position: absolute
+      top: -118px
+      left: -25%
+      @include responsive-c-max($md)
+        top: -93px
+      @include responsive-c-max($sm)
+        top: -43px
+      @include responsive-c-max($xs)
+        display: none
+
+  &-table
+    color: white
+    background: #444749
+    padding-bottom: 60px
+    padding-top: 20px
+    @include responsive-c-max($xs)
+      padding-top: 10px
+    &-heading
+      margin-top: 40px
+      margin-bottom: 15px
+      font-size: 18px
+      text-transform: uppercase
+      position: relative
+      @include responsive-c-max($md)
+        margin-bottom: 30px
+      @include responsive-c-max($sm)
+        font-size: 16px
+
+      span
+        @include responsive-c-max($md)
+          position: absolute
+          top: 0
+          left: 30px
+          min-height: 70px
+
+      &::before
+        display: inline-block
+        content: ' '
+        background: #f4ce25
+        width: 10px
+        height: 14px
+        margin-right: 20px
+        vertical-align: top
+        margin-top: 3px
+
+    &-content
+      span
+        display: block
+        font-size: 16px
+        padding: 7px 30px
+        &:nth-child(even)
+          background: #4e5153
+
+
+// Delivery
+
+.delivery
+  &-wrapper
+    border: 1px solid $borderColor
+    padding: 35px 80px 35px 70px
+    position: relative
+    cursor: pointer
+    margin-top: -1px
+    &.active
+      background: #f7f7f7
+  &-name
+    font-size: 18px
+    margin-bottom: 10px
+  &-content
+    font-size: 16px
+    color: $fontGreyColor
+    &-hidden
+      display: none
+      &.active
+        display: block
+
+  &-item-toggle
+    display: block
+    position: absolute
+    left: 30px
+    top: 35px
+    width: 20px
+    height: 20px
+    padding-left: 5px
+    padding-top: 1px
+    border-radius: 50%
+    border: 1px solid #cbcbcb
+    &.active
+      border: 1px solid $fontColor
+      .fa
+        transform: rotate(180deg)
+
+
+// modal
+#bonusModal
+  .modal-body
+    padding: 0
+  .modal-dialog
+    width: 630px
+    @include responsive-c-max($xs)
+      width: 100%
+
+  .close
+    border: 1px solid #d0d1d2
+    padding-left: 7px
+    padding-right: 7px
+    opacity: .6
+    top: 15px
+    right: 15px
+    position: absolute
+    &:hover
+      opacity: .9
+
+  .modal-pad
+    padding-left: 30px
+    padding-right: 30px
+
+
+.modal-dialog
+  .bonus-title
+    text-align: center
+  .bonus-subtitle
+    text-align: center
+
+  .bonus-form
+    background: url('http://localhost:3002/images/bonus-modal.png') no-repeat center
+    background-size: cover
+    color: white
+    padding-top: 40px
+    padding-bottom: 40px
+    margin-top: 0
+    position: relative
+  .bonus-triangle
+    display: inline-block
+    content: ' '
+    position: absolute
+    top: 0px
+    left: 48%
+    border-top: 15px solid #e0fbff
+    border-left: 15px solid transparent
+    border-right: 15px solid transparent
+    border-bottom: 15px solid transparent
+
+  .bonus-model
+    position: relative
+    img
+      min-height: 400px
+      width: 123%
+      max-width: 123%
+      bottom: -400px
+      @include responsive-c-max($md)
+        bottom: -365px
+
+
+.modal-bonus-top
+  background: linear-gradient(to top, #e0fbff, #fff)
+  padding-bottom: 50px
+  .row
+    padding-top: 40px

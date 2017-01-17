@@ -19,8 +19,9 @@
       }
     </script>
   </head>
-  <body class="catalog view">
-    <!-- TEMP--><script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+  <body>
+    <!-- TEMP--><script async src='http://localhost:3002/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+    <!-- shitty codding ??-->
     <div id="wrap">
       <div id="sub-header">
         <div class="container">
@@ -252,148 +253,55 @@
         <div class="container">
           <ul class="breadcrumb">
             <li><a href="/">Главная</a></li>
-            <li class="active"><a href="#">Адреса магазинов</a></li>
+            <li><a href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya">Инвентарь для плавания</a></li>
+            <li><a href="http://yii2.madwave.ru/catalog/inventar-dlya-plavaniya/doski-kalabashki">Доски и калабашки</a></li>
+            <li class="active">CORE ALIGNMENT</li>
           </ul>
         </div>
       </div>
       <div class="container">
-        <div class="product-view row mb60">
-          <div class="ajax-loading" id="variant">
-            <div class="clearfix">
-              <div class="col-xs-12 top-caption">
-                <h1>Адреса магазинов</h1>
-              </div>
-              <div class="shops-mobile-filter hidden-sm">
-                <div class="shops-mobile-filter-toggle active" id="shopHideFilters"><i class="fa fa-times"></i></div>
-                <div class="col-sm-6">
-                  <div class="form-group form-group--bold-label">
-                    <label>Режим работы</label>
-                    <input class="form-control form-control--short rad0" type="text" placeholder="с">
-                    <input class="form-control form-control--short rad0" type="text" placeholder="по">
+        <div class="row mb60">
+          <div id="variant">
+            <div class="col-xs-12 top-caption">
+              <h1>Способы доставки</h1>
+            </div>
+            <div class="col-xs-12">
+              <div class="delivery-wrapper active">
+                <div class="delivery-item-toggle active"><i class="fa fa-caret-down"></i></div>
+                <div class="delivery-name">Доставка курьерской службой</div>
+                <div class="delivery-content">
+                  <p>Наш курьер доставит заказ по указанному адресу с 9:00 до 23:00 в выбранный вами интервал времени <br> (из предложенных при оформлении заказа). Курьер дополнительно свяжется с вами перед выездом (ориентировочно за 1 час). По указанному адресу курьер будет ждать 15 минут, после чего мы оставляем за собой право перенести доставку на другое время, согласовав его с вами.</p>
+                  <div class="delivery-content-hidden active">
+                    <p>Обратите внимание, что курьер передает товар для проверки только после оплаты.</p>
+                    <p>Доставка в выбранном городе: При оплате картой курьер интернет-магазина приедет с товаром <br> и переносным терминалом, с помощью которого можно будет осуществить оплату. Внимание! Только <br> в пределах МКАД. Доставка за пределы МКАД осуществляется на следующий день после оформления заказа.</p>
+                    <p>Города РФ, кроме Москвы</p>
+                    <p>Стоимость доставки при сумме заказа до 2000 рублей составляет 200 рублей. При сумме заказа более 2000 рублей доставка осуществляется бесплатно. Доставка за пределы КАД города Санкт-Петербург осуществляется <br> на следующий день и составляет 200 рублей</p>
                   </div>
-                </div>
-                <div class="col-sm-6 mt20 shops-checkboxes">
-                  <label class="clearfix">
-                    <input class="checkbox" name="shops24h" type="checkbox"><span></span>24 часа
-                  </label>
-                  <label class="clearfix">
-                    <input class="checkbox" name="shopsOpenNow" type="checkbox"><span></span>Работает сейчас
-                  </label>
-                </div>
-                <div class="form-group form-group--bold-label">
-                  <div class="shops-quick-links"><a href="#">Электроный каталог</a><a href="#">Погашение кредита</a><a href="#">Терминал оплаты</a><a href="#">Настройки</a><a href="#">Банкомат</a><a href="#">Выдача кредитных карт</a></div>
                 </div>
               </div>
-              <div class="col-xs-12">
-                <div class="shops-wrapper hidden-xs">
-                  <!-- top filter-->
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group form-group--bold-label">
-                        <label>Введите адрес магазина</label>
-                        <input class="form-control rad0 form-control--search" type="text" placeholder="Например: Индустриальный проспект 70">
-                        <div class="shops-quick-links"><a href="#">Электроный каталог</a><a href="#">Погашение кредита</a><a href="#">Терминал оплаты</a><a href="#">Настройки</a><a href="#">Банкомат</a><a href="#">Выдача кредитных карт</a></div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group form-group--bold-label">
-                            <label>Режим работы</label>
-                            <input class="form-control form-control--short rad0" type="text" placeholder="с">
-                            <input class="form-control form-control--short rad0" type="text" placeholder="по">
-                          </div>
-                        </div>
-                        <div class="col-sm-6 mt20 shops-checkboxes">
-                          <label class="clearfix">
-                            <input class="checkbox" name="shops24h" type="checkbox"><span></span>24 часа
-                          </label>
-                          <label class="clearfix">
-                            <input class="checkbox" name="shopsOpenNow" type="checkbox"><span></span>Работает сейчас
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- sorting-->
-                  <div class="row hidden">
-                    <div class="col-sm-6">
-                      <div class="shops-result-num">Найдено 15 магазинов</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pull-right"><a class="shops-filter-btn" href="#"><i class="ico ico-filter"></i><span>Списком</span></a><a class="shops-filter-btn active" href="#"><i class="ico ico-loc"></i><span>На карте</span></a></div>
-                    </div>
+              <div class="delivery-wrapper">
+                <div class="delivery-item-toggle"><i class="fa fa-caret-down"></i></div>
+                <div class="delivery-name">Срочная доставка</div>
+                <div class="delivery-content">
+                  <p>Срочная доставка может будет осуществлена в любое время с 10:00 до 21:00 в интервале 1час, но не ранее, чем через 3 часа после оформления заказа. В случае опоздания курьера – доставка за наш счет! Минимальная сумма заказа отсутствует.</p>
+                  <div class="delivery-content-hidden">
+                    <p>Обратите внимание, что курьер передает товар для проверки только после оплаты.</p>
+                    <p>Доставка в выбранном городе: При оплате картой курьер интернет-магазина приедет с товаром <br> и переносным терминалом, с помощью которого можно будет осуществить оплату. Внимание! Только <br> в пределах МКАД. Доставка за пределы МКАД осуществляется на следующий день после оформления заказа.</p>
+                    <p>Города РФ, кроме Москвы</p>
+                    <p>Стоимость доставки при сумме заказа до 2000 рублей составляет 200 рублей. При сумме заказа более 2000 рублей доставка осуществляется бесплатно. Доставка за пределы КАД города Санкт-Петербург осуществляется <br> на следующий день и составляет 200 рублей</p>
                   </div>
                 </div>
-                <!-- mobile sorting-->
-                <div class="shops-wrapper-mobile visible-xs">
-                  <div class="row">
-                    <div class="col-xs-3"><a class="btn btn-outline" id="shopsShowFilters" href="#"><i class="fa fa-filter"></i></a></div>
-                    <div class="col-xs-6 text-center"><a class="btn btn-outline active" id="shopsShowList" href="#"><i class="fa fa-bars"></i></a><a class="btn btn-outline" id="shopsShowMap" href="#"><i class="fa fa-map-marker"></i></a></div>
-                    <div class="col-xs-3 text-right"><a class="btn btn-outline" href="#"><i class="fa fa-search"></i></a></div>
-                  </div>
-                </div>
-                <!-- results-->
-                <div class="shops-results active">
-                  <div class="row">
-                    <div class="col-sm-4 shops-results-scroll active">
-                      <div class="border-left">
-                        <div class="shops-result-num">Найдено 15 магазинов</div>
-                        <div class="shops-results-item active" data-id="1">
-                          <div class="shops-results-item-toggle active"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="2">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="3">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="3">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-8 shops-results-map no-pad-l">
-                      <!-- google map-->
-                      <div id="shopsMap"></div>
-                      <script>
-                        function initMap() {
-                        var map = new google.maps.Map(document.getElementById('shopsMap'), {
-                            center: {lat: -34.397, lng: 150.644},
-                            scrollwheel: false,
-                            zoom: 8
-                          });
-                        }
-                      </script>
-                      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7zn-91hwctgHBe_pkvWARH2m8rRq3Zhs&amp;callback=initMap" async="" defer=""></script>
-                    </div>
+              </div>
+              <div class="delivery-wrapper">
+                <div class="delivery-item-toggle"><i class="fa fa-caret-down"></i></div>
+                <div class="delivery-name">Самовывоз из офиса интернет-магазина</div>
+                <div class="delivery-content">
+                  <p>Свой заказ можно получить в офисе интернет-магазина в вашем городе. Минимальная сумма заказа отсутсвует.</p>
+                  <div class="delivery-content-hidden">
+                    <p>Обратите внимание, что курьер передает товар для проверки только после оплаты.</p>
+                    <p>Доставка в выбранном городе: При оплате картой курьер интернет-магазина приедет с товаром <br> и переносным терминалом, с помощью которого можно будет осуществить оплату. Внимание! Только <br> в пределах МКАД. Доставка за пределы МКАД осуществляется на следующий день после оформления заказа.</p>
+                    <p>Города РФ, кроме Москвы</p>
+                    <p>Стоимость доставки при сумме заказа до 2000 рублей составляет 200 рублей. При сумме заказа более 2000 рублей доставка осуществляется бесплатно. Доставка за пределы КАД города Санкт-Петербург осуществляется <br> на следующий день и составляет 200 рублей</p>
                   </div>
                 </div>
               </div>

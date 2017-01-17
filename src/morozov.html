@@ -19,9 +19,10 @@
       }
     </script>
   </head>
-  <body class="catalog view">
-    <!-- TEMP--><script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.18.6'></script>
-    <div id="wrap">
+  <body>
+    <!-- TEMP--><script async src='http://localhost:3002/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+    <!-- no need on wrapper here-->
+    <div id="wr2ap">
       <div id="sub-header">
         <div class="container">
           <div class="pull-left pointer call-city-picker" data-target="#city-picker"><i class="map-marker"></i><span class="city location-city">Москва</span>
@@ -248,159 +249,162 @@
         </div>
       </header>
       <div class="page-buffer"></div>
-      <div class="breadcrumbs_container mb30">
-        <div class="container">
-          <ul class="breadcrumb">
-            <li><a href="/">Главная</a></li>
-            <li class="active"><a href="#">Адреса магазинов</a></li>
-          </ul>
+      <!-- add no margin-->
+      <section class="no-m" id="main-banner">
+        <div class="banner _morozov inner">
+          <div class="container text-center">
+            <h2 class="h1">ВЛАДИМИР МОРОЗОВ</h2>
+            <div class="banner-country">Россия</div>
+            <div class="banner-quote">«Результат возможен лишь тогда, когда ты сам в это веришь. <br> А не когда надеешься на какое-то чудо»</div>
+            <p>Бронзовый призёр Олимпийских игр в Лондоне, двукратный призёр чемпионата мира,
+              <br> чемпион Европы, первый в истории России обладатель Кубка мира по плаванию.
+              <br> ВЛАДИМИР МОРОЗОВ стал офttициальным лицом компании Mad Wave –
+              <br> лидера по производству профессиональной экипировки
+              <br> и аксессуаров для плавания в России.
+              <br> 2017 – год новых побед!
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="product-view row mb60">
-          <div class="ajax-loading" id="variant">
-            <div class="clearfix">
-              <div class="col-xs-12 top-caption">
-                <h1>Адреса магазинов</h1>
-              </div>
-              <div class="shops-mobile-filter hidden-sm">
-                <div class="shops-mobile-filter-toggle active" id="shopHideFilters"><i class="fa fa-times"></i></div>
-                <div class="col-sm-6">
-                  <div class="form-group form-group--bold-label">
-                    <label>Режим работы</label>
-                    <input class="form-control form-control--short rad0" type="text" placeholder="с">
-                    <input class="form-control form-control--short rad0" type="text" placeholder="по">
-                  </div>
+        <!--copy-paste-->
+        <div class="banner _morozov inner">
+          <div class="container text-center">
+            <h2 class="h1">ВЛАДИМИР МОРОЗОВ</h2>
+            <div class="banner-country">Россия</div>
+            <div class="banner-quote">«Результат возможен лишь тогда, когда ты сам в это веришь. <br> А не когда надеешься на какое-то чудо»</div>
+            <p>Бронзовый призёр Олимпийских игр в Лондоне, двукратный призёр чемпионата мира,
+              <br> чемпион Европы, первый в истории России обладатель Кубка мира по плаванию.
+              <br> ВЛАДИМИР МОРОЗОВ стал офttициальным лицом компании Mad Wave –
+              <br> лидера по производству профессиональной экипировки
+              <br> и аксессуаров для плавания в России.
+              <br> 2017 – год новых побед!
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- NEW MARKUP-->
+      <section class="sportsmen-short">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-md-offset-2">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="sportsmen-short-name">Возраст</div>
+                  <div class="sportsmen-short-effort"><span>24</span> года</div>
                 </div>
-                <div class="col-sm-6 mt20 shops-checkboxes">
-                  <label class="clearfix">
-                    <input class="checkbox" name="shops24h" type="checkbox"><span></span>24 часа
-                  </label>
-                  <label class="clearfix">
-                    <input class="checkbox" name="shopsOpenNow" type="checkbox"><span></span>Работает сейчас
-                  </label>
+                <div class="col-sm-3">
+                  <div class="sportsmen-short-name">Рост</div>
+                  <div class="sportsmen-short-effort"><span>186</span> см</div>
                 </div>
-                <div class="form-group form-group--bold-label">
-                  <div class="shops-quick-links"><a href="#">Электроный каталог</a><a href="#">Погашение кредита</a><a href="#">Терминал оплаты</a><a href="#">Настройки</a><a href="#">Банкомат</a><a href="#">Выдача кредитных карт</a></div>
+                <div class="col-sm-3">
+                  <div class="sportsmen-short-name">Специализация</div>
+                  <div class="sportsmen-short-effort mt20">Кроль, спина</div>
                 </div>
-              </div>
-              <div class="col-xs-12">
-                <div class="shops-wrapper hidden-xs">
-                  <!-- top filter-->
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group form-group--bold-label">
-                        <label>Введите адрес магазина</label>
-                        <input class="form-control rad0 form-control--search" type="text" placeholder="Например: Индустриальный проспект 70">
-                        <div class="shops-quick-links"><a href="#">Электроный каталог</a><a href="#">Погашение кредита</a><a href="#">Терминал оплаты</a><a href="#">Настройки</a><a href="#">Банкомат</a><a href="#">Выдача кредитных карт</a></div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="form-group form-group--bold-label">
-                            <label>Режим работы</label>
-                            <input class="form-control form-control--short rad0" type="text" placeholder="с">
-                            <input class="form-control form-control--short rad0" type="text" placeholder="по">
-                          </div>
-                        </div>
-                        <div class="col-sm-6 mt20 shops-checkboxes">
-                          <label class="clearfix">
-                            <input class="checkbox" name="shops24h" type="checkbox"><span></span>24 часа
-                          </label>
-                          <label class="clearfix">
-                            <input class="checkbox" name="shopsOpenNow" type="checkbox"><span></span>Работает сейчас
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- sorting-->
-                  <div class="row hidden">
-                    <div class="col-sm-6">
-                      <div class="shops-result-num">Найдено 15 магазинов</div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="pull-right"><a class="shops-filter-btn" href="#"><i class="ico ico-filter"></i><span>Списком</span></a><a class="shops-filter-btn active" href="#"><i class="ico ico-loc"></i><span>На карте</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <!-- mobile sorting-->
-                <div class="shops-wrapper-mobile visible-xs">
-                  <div class="row">
-                    <div class="col-xs-3"><a class="btn btn-outline" id="shopsShowFilters" href="#"><i class="fa fa-filter"></i></a></div>
-                    <div class="col-xs-6 text-center"><a class="btn btn-outline active" id="shopsShowList" href="#"><i class="fa fa-bars"></i></a><a class="btn btn-outline" id="shopsShowMap" href="#"><i class="fa fa-map-marker"></i></a></div>
-                    <div class="col-xs-3 text-right"><a class="btn btn-outline" href="#"><i class="fa fa-search"></i></a></div>
-                  </div>
-                </div>
-                <!-- results-->
-                <div class="shops-results active">
-                  <div class="row">
-                    <div class="col-sm-4 shops-results-scroll active">
-                      <div class="border-left">
-                        <div class="shops-result-num">Найдено 15 магазинов</div>
-                        <div class="shops-results-item active" data-id="1">
-                          <div class="shops-results-item-toggle active"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="2">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="3">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                        <!--next-->
-                        <div class="shops-results-item" data-id="3">
-                          <div class="shops-results-item-toggle"><i class="fa fa-caret-down"></i></div>
-                          <div class="shops-results-row"><i class="ico ico-metro"></i><span>Проспект Большевиков</span></div>
-                          <div class="shops-results-row"><i class="ico ico-loc-gray"></i><span>ул. Джона Рида, 8, к.2</span></div>
-                          <div class="shops-results-row"><i class="ico ico-time"></i><span>10:00 - 21:00</span></div>
-                          <div class="shops-results-row"><i class="ico ico-mobile"></i><span>+7 911 760 82 98</span></div>
-                          <div class="shops-results-row"><i class="ico ico-delivery"></i><span><b>Самовывоз:</b> Да</span></div>
-                          <div class="shops-results-row"><i class="ico ico-place"></i><span>ЦВВС "Невская Волна"</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-8 shops-results-map no-pad-l">
-                      <!-- google map-->
-                      <div id="shopsMap"></div>
-                      <script>
-                        function initMap() {
-                        var map = new google.maps.Map(document.getElementById('shopsMap'), {
-                            center: {lat: -34.397, lng: 150.644},
-                            scrollwheel: false,
-                            zoom: 8
-                          });
-                        }
-                      </script>
-                      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7zn-91hwctgHBe_pkvWARH2m8rRq3Zhs&amp;callback=initMap" async="" defer=""></script>
-                    </div>
-                  </div>
+                <div class="col-sm-3">
+                  <div class="sportsmen-short-name">Интересы</div>
+                  <div class="sportsmen-short-effort">Серфинг, <br> музыка, кино</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- Достижения-->
+      <section class="sportsmen-achievements">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--yellow">
+                <p>Первый в истории России <br> обладатель Кубка мира <br> по плаванию (2016)</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--red">
+                <p>Бронзовый призер ОИ-2012 <br> в Лондоне в эстафете <br> 4х100 м вольным стилем</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--green">
+                <p>Двукратный призёр чемпионата мира (Барселона-2013)</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--blue">
+                <p>Чемпион Европы (Берлин-2014)</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--violet">
+                <p>Многократный чемпион мира и Европы на короткой воде</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--pink">
+                <p>Двукратный рекордсмен мира на короткой воде (100 м комплекс, эстафета 4х50 м в/c)</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--red">
+                <p>Многократный чемпион <br> и рекордсмен России</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="sportsmen-achievements-block block--orange">
+                <p>3-кратный рекордсмен США среди юношей</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Цитата-->
+      <section class="sportsmen-quote">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="sportsmen-quote-text"><i class="fa fa-angle-double-left"></i><i class="fa fa-angle-double-right"></i>
+                <div class="sportsmen-quote-title">Я – ВЛАДИМИР МОРОЗОВ</div>
+                <p>Путь к победе – это ежедневная работа над собой, <br> тяжёлые тренировки и твёрдость духа. Чтобы держать себя в форме,  мне нужны профессиональные решения для тренировок и стартов. <br> Именно поэтому я выбрал Mad Wave. Mad Wave – волна новых чемпионов.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="sportsmen-quote-image"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sportsmen-table">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="sportsmen-table-heading"><span>Олимпийские игры 2012</span></div>
+              <div class="sportsmen-table-content"><span>Бронза эстафета 4х100 в/c</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат мира  2013</span></div>
+              <div class="sportsmen-table-content"><span>Серебро 50 м в/с</span><span>Бронза эстафета 4х100 м в/c</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат Европы 2014</span></div>
+              <div class="sportsmen-table-content"><span>Золото 50 м спина</span><span>Серебро эстафета 4х100 м в/с</span><span>Серебро эстафета 4х100 м в/с микст</span><span>Бронза комб.эстафета 4х100 м в/c микст</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат мира <br> на короткой воде 2016</span></div>
+              <div class="sportsmen-table-content"><span>Золото эстафета 4х50 м в/с</span><span>Золото эстафета 4х100 м в/с</span><span>Золото эстафета 4х50 м комплекс</span><span>Золото эстафета 4х100 м комплекс</span><span>Золото эстафета 4х50 м в/с микст</span><span>Серебро 50 м в/с</span><span>Серебро 100 м брасс</span></div>
+            </div>
+            <div class="col-sm-4">
+              <div class="sportsmen-table-heading"><span>Олимпийские игры 2012</span></div>
+              <div class="sportsmen-table-content"><span>Золото 50 м спина</span><span>Серебро эстафета 4х100 м в/с</span><span>Серебро эстафета 4х100 м в/с микст</span><span>Бронза комб.эстафета 4х100 м в/c микст</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат мира на короткой воде 2014</span></div>
+              <div class="sportsmen-table-content"><span>Золото эстафета 4х50 м в/c</span><span>Серебро 100 м комплекс</span><span>Серебро эстафета 4х100 м в/с</span><span>Серебро эстафета 4х50 м в/c микст</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат мира на короткой воде 2012</span></div>
+              <div class="sportsmen-table-content"><span>Золото 50 м в/с</span><span>Золото 100 м в/с</span><span>Серебро комб.эстафета 4х100 м</span></div>
+              <div class="sportsmen-table-heading"><span>Чемпионат Европы <br> на короткой воде 2013</span></div>
+              <div class="sportsmen-table-content"><span>Золото 50 м в/с</span><span>Золото 100 м в/с</span><span>Золото 100 м комплекс</span><span>Золото эстафета 4х50 м в/с</span><span>Золото эстафета 4х50 м в/с микст</span></div>
+            </div>
+            <div class="col-sm-4">
+              <div class="sportsmen-table-heading"><span>Чемпионат Европы <br> на короткой воде 2012</span></div>
+              <div class="sportsmen-table-content"><span>Золото 100 м в/с</span><span>Золото 100 м комплекс</span><span>Серебро 50 м в/с</span><span>Серебро комб.эстафета 4х50 м</span><span>Серебро эстафета 4х50 м в/с</span><span>Серебро комб.эстафета 4х50 м микст</span><span>Бронза 50 м спина</span></div>
+              <div class="sportsmen-table-heading"><span>Универсиада 2013</span></div>
+              <div class="sportsmen-table-content"><span>Золото 50 м в/с</span><span>Золото 100 м в/с</span><span>Золото эстафета 4х100 м в/с</span><span>Золото комб.эстафета 4х100 м</span><span>Серебро 50 м спина</span><span>Бронза 50 м брасс</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <section id="subscribe">
       <div class="container p0">Подписаться на новости
@@ -454,7 +458,7 @@
     <script src="/assets/eff483b6/yii.validation.js"></script>
     <script src="/assets/eff483b6/yii.activeForm.js"></script>
     <!-- add main.js-->
-    <script type="text/javascript" src="http://localhost:3002/js/main.js"></script>
+    <script type="text/javascript" src="http://localhost:3000/js/main.js"></script>
     <script type="text/javascript">
       jQuery(document).ready(function () {
       ga('ec:addProduct', {"id":"M0727 01","name":"CORE ALIGNMENT","category":"Калабашка","brand":"Mad Wave","variant":"M0727 01 0 00W"}); ga('ec:setAction', 'detail');

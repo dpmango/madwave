@@ -1,0 +1,70 @@
+doctype html
+html(lang="ru-RU")
+  include shared/head.pug
+
+  body.catalog.view
+    // TEMP
+    <script async src='http://localhost:3002/browser-sync/browser-sync-client.js?v=2.18.6'></script>
+
+    .center(style="margin: 40vh 0; text-align: center")
+      button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#bonusModal')
+        | BONUS CARD MODAL
+    // Modal
+    #bonusModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='bonusModalLabel')
+      .modal-dialog(role='document')
+        .modal-content
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          .modal-body
+            .modal-bonus-top
+              .bonus-title Выгода ДО 60%
+              .bonus-subtitle с первой покупки
+
+              .row.modal-pad
+                .col-sm-6
+                  a.bonus-card(href="#")
+                    img.img-responsive(src="http://localhost:3002/images/bonus-goods.png")
+                    .bonus-card-content
+                      .bonus-card-title cult
+                      .bonus-card-desc Мужские плавки антихлор
+                      .bonus-card-price
+                        .bonus-card-old 590 <i class="fa fa-rub"></i>
+                        .bonus-card-new <i class="fa fa-credit-card"></i> 1590 <i class="fa fa-rub"></i>
+                      .bonus-card-tag
+                        span 60%
+
+                  a.bonus-card(href="#")
+                    img.img-responsive(src="http://localhost:3002/images/bonus-goods.png")
+                    .bonus-card-content
+                      .bonus-card-title cult
+                      .bonus-card-desc Мужские плавки антихлор
+                      .bonus-card-price
+                        .bonus-card-old 590 <i class="fa fa-rub"></i>
+                        .bonus-card-new <i class="fa fa-credit-card"></i> 1590 <i class="fa fa-rub"></i>
+                      .bonus-card-tag
+                        span 60%
+
+                .col-sm-6.hidden-xs
+                  .bonus-model
+                    img.img-responsive(src="http://localhost:3002/images/bonus-model.png")
+
+            form.bonus-form.modal-pad(action="")
+              .bonus-triangle
+              .row
+                .col-sm-12
+                  .bonus-form-title Зарегистрируйтесь и получите <br> скидочную карту
+                .col-sm-6
+                  .form-group
+                    label ВАШЕ ИМЯ
+                    input.form-control.rad0(type="text" placeholder="Как вас зовут")
+                  .form-group
+                    label ВАШ EMAIL
+                    input.form-control.rad0(type="email" placeholder="Ваш электронный адрес")
+                  button.btn.btn-lg.btn-danger.btn-pad(type="submit") Получить карту
+                  .bonus-form-small Мы пришлем логин и пароль <br> на ваш почтовый адрес
+                .col-sm-5
+                  .bonus-form-strategy Стратегия предоставления скидок <br> и бонусов одновременно стабилизирует поведенческий таргетинг. Более того, имидж предприятия упорядочивает conversion rate.
+                  a.btn.btn-lg.btn-primary.btn-block(href="#") У меня уже есть карта
+
+
+    include shared/footer.pug

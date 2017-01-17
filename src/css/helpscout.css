@@ -1,0 +1,233 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Montserrat:400,700,400italic,700italic";
+body {
+  background: #ffffff;
+}
+.navbar .navbar-inner {
+  background: #ffffff;
+}
+.navbar .nav li a, .navbar .icon-private-w {
+  color: #c0c0c0;
+}
+.navbar .brand, .navbar .nav li a:hover, .navbar .nav li a:focus, .navbar .nav .active a, .navbar .nav .active a:hover, .navbar .nav .active a:focus {
+  color: #47cae6;
+}
+.navbar a:hover .icon-private-w, .navbar a:focus .icon-private-w, .navbar .active a .icon-private-w, .navbar .active a:hover .icon-private-w, .navbar .active a:focus .icon-private-w {
+  color: #47cae6;
+}
+#serp-dd .result a:hover, #serp-dd .result>li.active, #full-Article strong a, .collection a, .contentWrapper a, .most-pop-articles .popArticles a, .most-pop-articles .popArticles a:hover span, .category-list .category .article-count, .category-list .category:hover .article-count {
+  color: #47cae6;
+}
+#fullArticle, #fullArticle p, #fullArticle ul, #fullArticle ol, #fullArticle li, #fullArticle div, #fullArticle blockquote, #fullArticle dd, #fullArticle table {
+  color: #486470;
+  font-size: 16px;
+}
+body {
+  font-family: Lato, sans-serif;
+  color: #506872;
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, .btn {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 2rem;
+}
+input, button, select, textarea {
+  font-family: Lato, sans-serif;
+}
+textarea, input[type=text], input[type=password], input[type=datetime], input[type=datetime-local], input[type=date], input[type=month], input[type=time], input[type=week], input[type=number], input[type=email], input[type=url], input[type=search], input[type=tel], input[type=color], .uneditable-input {
+  border-color: #e3e5e5;
+}
+textarea:focus, input:focus, input[type=text]:focus, input[type=password]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=date]:focus, input[type=month]:focus, input[type=time]:focus, input[type=week]:focus, input[type=number]:focus, input[type=email]:focus, input[type=url]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=color]:focus, .uneditable-input:focus {
+  border-color: #47cae6;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn, button {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.btn:hover {
+  -webkit-filter: brightness(115%);
+  filter: brightness(115%);
+}
+#fullArticle h1, #fullArticle h2, #fullArticle h3, #fullArticle h4, #fullArticle h5 {
+  color: #506872;
+}
+#mainNav {
+  text-align: center;
+}
+.navbar .nav>li>a {
+  font-size: 18px;
+}
+.navbar .nav .active .caret {
+  border-top: 0;
+  border-bottom: 8px solid #506872;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  right: 40%;
+}
+.navbar .brand {
+  display: inline-block;
+  float: none;
+}
+#mainNav .brand span {
+  display: inline-block;
+  text-indent: -9000px;
+  width: 300px;
+  height: 55px;
+  background: url(https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/143056/settings_images/ZyXCler9T7GAEJiGXOTE_BLG-Logo-Large.png) no-repeat 0 0;
+  background-size: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+#docsSearch {
+  background: #506872;
+  color: white;
+}
+#docsSearch h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+#searchBar button {
+  background: #47cae6;
+  border-radius: 0px;
+  text-shadow: none;
+  border-color: transparent;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#searchBar button:hover {
+  background: #47cae6;
+  -webkit-filter: brightness(115%);
+  filter: brightness(115%);
+}
+#main-content {
+  background: none;
+}
+#contentArea {
+  background: #ecf0f1;
+  max-width: 100%;
+}
+#contentArea .row-fluid {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+#docsSearch+#contentArea {
+  background: white;
+}
+.contentWrapper {
+  background: white;
+  border-color: #e3e5e5;
+}
+#sidebar form .search-query {
+  height: 44px;
+  margin-bottom: 25px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 0 10px;
+  border-color: #e3e5e5;
+}
+#sidebar form .search-query:focus+button .icon-search {
+  color: #2E91FC;
+}
+#searchBar.sm button {
+  height: 44px;
+}
+#fullArticle .title {
+  margin: 0 30px 1.5em 0
+}
+.articleFoot p, .articleFoot time {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+footer p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+footer p span {
+  display: none;
+}
+footer p a:last-child {
+  display: none;
+}
+footer.center p {
+  text-align: right;
+}
+.sep {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+#contactModal h2 {
+  padding: 12px 0 10px 25px
+}
+.modal #closeBtn {
+  top: 20px
+}
+.modal-body input {
+  height: 38px;
+  margin-bottom: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 0 10px;
+  border-color: #e3e5e5;
+}
+#contactModal .control-label {
+  padding-top: 12px;
+}
+#contactModal input[type=submit].btn {
+  background: #47cae6;
+  border-radius: 0px;
+  text-shadow: none;
+  border-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px 30px;
+  line-height: 1;
+}
+#contactModal input[type=file] {
+  padding-top: 12px;
+}
+@media(max-width: 768px) {
+  .navbar .btn-navbar {
+    top: 20px;
+  }
+  #contentArea {
+    background: white;
+  }
+}
+@media (max-width: 500px) {
+  #mainNav {
+    text-align: left;
+  }
+}
+@media(max-width: 480px) {
+  #searchBar button .icon-search {
+    color: white;
+  }
+}
+@media(max-width: 414px) {
+  #mainNav .brand span {
+    max-width: 95%;
+    height: 36px;
+  }
+}
+@media(max-width: 350px) {
+  #mainNav .brand span {
+    max-width: 80%;
+    height: 30px;
+  }
+  .navbar .btn-navbar {
+    top: 15px;
+  }
+}
